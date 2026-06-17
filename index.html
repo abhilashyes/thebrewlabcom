@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>The Brew Lab — Brew Ideas.</title>
+<meta name="description" content="The Brew Lab — a coffee house for people with something to make. Good coffee, made to go. Coffee. Create. Connect.">
+<meta name="theme-color" content="#0F1117">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="The Brew Lab — Brew Ideas.">
+<meta property="og:description" content="Good coffee, made to go. Coffee. Create. Connect.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<script>try{var t=localStorage.getItem('brewlab-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/effects.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://esm.sh/three@0.161.0",
+    "gsap": "https://esm.sh/gsap@3.12.5",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.5/ScrollTrigger.js",
+    "lenis": "https://esm.sh/lenis@1.1.13"
+  }
+}
+</script>
+</head>
+<body data-page="home">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ambient" aria-hidden="true"></div>
+
+<nav aria-label="Primary">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="braces">{ }</span> The Brew Lab</a>
+    <button class="nav-burger" data-nav-burger aria-label="Open menu" aria-expanded="false" aria-controls="navmenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <div class="nav-links nav-menu" id="navmenu" data-nav-menu>
+      <button class="nav-menu-close" data-nav-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <a class="navlink" href="index.html" aria-current="page">Home</a>
+      <a class="navlink" href="menu.html">Menu</a>
+      <a class="navlink" href="rewards.html">Rewards</a>
+      <a class="navlink" href="story.html">Story</a>
+      <a class="navlink" href="franchise.html">Partner</a>
+      <a class="navlink" href="pitch.html">Pitch</a>
+      <button class="toggle" data-theme-toggle aria-label="Toggle theme"><span data-theme-icon aria-hidden="true">◑</span> <span data-theme-text>light</span></button>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+<header class="hero">
+  <div class="hero-canvas" data-hero-canvas aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>// good coffee, made to go</span>
+      <h1 class="title">THE BREW LAB<br><span class="grad-text">Brew Ideas.</span></h1>
+      <p class="mantra">Coffee. Create. Connect.</p>
+      <p class="sub">the best two minutes of your morning</p>
+      <div class="cta-row">
+        <a href="menu.html" class="btn btn-primary magnetic" data-magnetic="0.25">Grab one to go →</a>
+        <a href="rewards.html" class="btn btn-ghost magnetic" data-magnetic="0.25">See what's brewing</a>
+      </div>
+    </div>
+
+    <div class="editor reveal" data-repl>
+      <div class="ed-bar">
+        <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="tab"><b>brewLab</b>.js — terminal</div>
+      </div>
+      <div class="ed-body">
+        <div class="gutter mono" aria-hidden="true"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div></div>
+        <div class="code"><pre class="mono"><span class="kw">const</span> <span class="prop">brewLab</span> <span class="pun">=</span> <span class="pun">{</span>
+  <span class="prop">coffee</span><span class="pun">:</span> <span class="str">"Exceptional"</span><span class="pun">,</span>
+  <span class="prop">creativity</span><span class="pun">:</span> <span class="str">"Unlimited"</span><span class="pun">,</span>
+  <span class="prop">community</span><span class="pun">:</span> <span class="str">"Always On"</span><span class="pun">,</span>
+  <span class="prop">future</span><span class="pun">:</span> <span class="num">Infinity</span>
+<span class="pun">}</span>
+<span class="fn">brewIdeas</span><span class="pun">()</span><span class="cursor-blink"></span></pre></div>
+      </div>
+      <div class="repl-stream" data-repl-stream role="log" aria-live="polite" aria-label="Terminal output"></div>
+      <div class="repl-chips" role="group" aria-label="Quick commands">
+        <button class="repl-chip" type="button" data-cmd="help">help</button>
+        <button class="repl-chip" type="button" data-cmd="brew latte">brew latte</button>
+        <button class="repl-chip" type="button" data-cmd="menu">menu</button>
+        <button class="repl-chip" type="button" data-cmd="rewards">rewards</button>
+        <button class="repl-chip" type="button" data-cmd="locate">locate</button>
+      </div>
+      <form class="repl-input-row" data-repl-form>
+        <span class="repl-prompt" aria-hidden="true">brewLab ›</span>
+        <input class="repl-input" data-repl-input type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Type a command, for example help" placeholder="type 'help' or tap a command…">
+        <button class="run" type="submit">▶ run</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<section id="positioning">
+  <div class="wrap">
+    <div class="sec-label reveal">// more than a cup</div>
+    <h2 class="reveal">The coffee's the reason you stop.<br>The people are why you come back.</h2>
+    <p class="lead reveal">Most days it's a two-minute stop on the way to somewhere else. But it's your two minutes — the order that's already remembered, a cup that's actually good, a small warm start before the day gets loud.</p>
+    <div class="triad" data-cine-group>
+      <div class="tcard reveal" data-cine-item><div class="k mono">// the cup</div><h3>Coffee</h3><p>Beans we actually fuss over, pulled with care and priced like a habit you can keep. The kind of cup you look forward to on the walk over.</p></div>
+      <div class="tcard reveal" data-cine-item><div class="k mono">// the ritual</div><h3>Made to go</h3><p>Order ahead, skip the queue, in and out in a minute — without the cup ever feeling rushed. Built around your morning, not the other way round.</p></div>
+      <div class="tcard reveal" data-cine-item><div class="k mono">// the regulars</div><h3>The people</h3><p>The barista who starts your order before you reach the counter. The familiar faces in the morning line. And the meetups that bring everyone back together when there's time to linger.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="scene" data-brew-journey aria-label="From bean to community">
+  <div class="wrap">
+    <div class="sec-label">// the build</div>
+    <div class="brew-rail" aria-hidden="true"><span class="fill"></span></div>
+    <div class="journey-stages">
+      <h2 data-stage class="grad-text" style="min-height:1.2em">Bean.</h2>
+      <h2 data-stage style="min-height:1.2em">Grind.</h2>
+      <h2 data-stage style="min-height:1.2em">Brew.</h2>
+      <h2 data-stage style="min-height:1.2em">Cup.</h2>
+      <h2 data-stage style="min-height:1.2em">Community.</h2>
+    </div>
+    <p class="lead">Five steps, one ritual — repeated every morning until it becomes part of the place.</p>
+  </div>
+</section>
+
+<section id="rewards-teaser" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-label reveal">// for the regulars</div>
+    <h2 class="reveal">We look after the people who keep coming back.</h2>
+    <p class="lead reveal">Five tiers, earned a cup at a time. Free drinks, first dibs on events and new drops, and the odd little surprise from the people behind the counter.</p>
+    <div class="tiers" data-cine-group>
+      <div class="tier reveal" data-cine-item><div class="lvl mono">tier 01</div><div class="name">Explorer</div></div>
+      <div class="tier reveal" data-cine-item><div class="lvl mono">tier 02</div><div class="name">Builder</div></div>
+      <div class="tier reveal" data-cine-item><div class="lvl mono">tier 03</div><div class="name">Architect</div></div>
+      <div class="tier reveal" data-cine-item><div class="lvl mono">tier 04</div><div class="name">Founder</div></div>
+      <div class="tier reveal" data-cine-item><div class="lvl mono">tier 05</div><div class="name">Visionary</div></div>
+    </div>
+    <div class="cta-row" style="margin-top:32px">
+      <a href="rewards.html" class="btn btn-primary magnetic" data-magnetic="0.25">Join the rewards →</a>
+    </div>
+  </div>
+</section>
+
+<section id="manifesto" class="manifesto">
+  <div class="wrap">
+    <div class="sec-label reveal" style="color:var(--cyan)">// the short version</div>
+    <h2 class="reveal">The Brew Lab was never really about the coffee.</h2>
+    <p class="big seq reveal">It's about the <b>ideas</b>, the <b>conversations</b>, the <b>people</b>, and the small, steady warmth of <b style="color:var(--text)">somewhere good things begin</b>.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px"><span class="braces">{ }</span> The Brew Lab</a>
+        <p class="foot-meta">A coffee house for people with something to make.<br>Born on a campus. Growing one neighbourhood at a time.</p>
+        <nav class="foot-nav" aria-label="Footer">
+          <a href="menu.html">Menu</a>
+          <a href="rewards.html">Rewards</a>
+          <a href="story.html">Story</a>
+          <a href="franchise.html">Partner with us</a>
+          <a href="pitch.html">Pitch deck</a>
+        </nav>
+      </div>
+      <div class="foot-code mono" aria-hidden="true">
+<span class="kw">while</span><span class="pun">(</span><span class="prop">alive</span><span class="pun">){</span>
+  <span class="fn">drinkCoffee</span><span class="pun">();</span>
+  <span class="fn">create</span><span class="pun">();</span>
+  <span class="fn">connect</span><span class="pun">();</span>
+<span class="pun">}</span>
+      </div>
+    </div>
+    <div class="foot-sig"><b>THE BREW LAB</b> · Brew Ideas. · Coffee. Create. Connect. <span style="margin-left:auto;opacity:.7;">© 2026</span></div>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

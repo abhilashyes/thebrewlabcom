@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Rewards — The Brew Lab</title>
+<meta name="description" content="Five tiers, earned a cup at a time. Free drinks, first dibs on events, and the odd surprise from the people behind the counter.">
+<meta name="theme-color" content="#0F1117">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Rewards — The Brew Lab">
+<meta property="og:description" content="Explorer to Visionary — we look after the regulars.">
+<meta property="og:image" content="assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<script>try{var t=localStorage.getItem('brewlab-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/effects.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://esm.sh/three@0.161.0",
+    "gsap": "https://esm.sh/gsap@3.12.5",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.5/ScrollTrigger.js",
+    "lenis": "https://esm.sh/lenis@1.1.13"
+  }
+}
+</script>
+<style>
+  .tier-cards { display:grid; grid-template-columns:1fr; gap:14px; margin-top:42px; }
+  @media (min-width:760px){ .tier-cards { grid-template-columns:repeat(5,1fr); } }
+  .tcard2 { background:var(--editor); border:1px solid var(--line); border-radius:var(--r-xl); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:transform var(--t-base) ease, border-color var(--t-base) ease; }
+  .tcard2:hover { transform:translateY(-5px); border-color:var(--lavender); }
+  .tcard2 .lvl { font-family:var(--font-mono); font-size:11px; color:var(--muted); }
+  .tcard2 .nm { font-size:21px; font-weight:700; letter-spacing:-0.02em; }
+  .tcard2 ul { list-style:none; display:grid; gap:8px; margin-top:4px; }
+  .tcard2 li { font-size:13px; color:var(--muted); display:flex; gap:8px; }
+  .tcard2 li::before { content:"›"; color:var(--lavender); }
+  .tcard2:nth-child(1) .nm{color:var(--cyan);} .tcard2:nth-child(2) .nm{color:var(--champagne);}
+  .tcard2:nth-child(3) .nm{color:var(--lavender);} .tcard2:nth-child(4) .nm{color:var(--rose);}
+  .tcard2:nth-child(5) .nm{ background:linear-gradient(110deg,var(--lavender),var(--rose)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .prog { margin:44px 0 8px; }
+  .prog .track { height:8px; border-radius:var(--r-pill); background:var(--line); overflow:hidden; }
+  .prog .track .fill { height:100%; width:0; background:var(--grad); border-radius:var(--r-pill); transition:width 1.4s var(--ease); }
+  .prog .labels { display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:8px; }
+  .how { display:grid; grid-template-columns:1fr; gap:14px; margin-top:42px; }
+  @media (min-width:680px){ .how { grid-template-columns:repeat(3,1fr); } }
+  .how .step { background:var(--editor); border:1px solid var(--line); border-radius:var(--r-lg); padding:22px 20px; }
+  .how .step .n { font-family:var(--font-mono); color:var(--cyan); font-size:12px; margin-bottom:10px; }
+  .how .step h3 { font-size:17px; font-weight:700; margin-bottom:6px; }
+  .how .step p { color:var(--muted); font-size:14px; }
+  .signup { margin-top:52px; background:var(--glass); border:1px solid var(--line); border-radius:var(--r-xl); padding:clamp(24px,5vw,40px); position:relative; overflow:hidden; }
+  .signup form { display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; }
+  .signup input { flex:1; min-width:200px; min-height:48px; padding:0 16px; border-radius:var(--r-md); border:1px solid var(--line); background:var(--editor); color:var(--text); font-family:var(--font-sans); font-size:15px; }
+  .signup input:focus-visible { outline:2px solid var(--lavender); outline-offset:2px; }
+  .signup .ph { font-family:var(--font-mono); font-size:12px; color:var(--champagne); }
+</style>
+</head>
+<body data-page="rewards">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ambient" aria-hidden="true"></div>
+
+<nav aria-label="Primary">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="braces">{ }</span> The Brew Lab</a>
+    <button class="nav-burger" data-nav-burger aria-label="Open menu" aria-expanded="false" aria-controls="navmenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <div class="nav-links nav-menu" id="navmenu" data-nav-menu>
+      <button class="nav-menu-close" data-nav-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="menu.html">Menu</a>
+      <a class="navlink" href="rewards.html" aria-current="page">Rewards</a>
+      <a class="navlink" href="story.html">Story</a>
+      <a class="navlink" href="franchise.html">Partner</a>
+      <a class="navlink" href="pitch.html">Pitch</a>
+      <button class="toggle" data-theme-toggle aria-label="Toggle theme"><span data-theme-icon aria-hidden="true">◑</span> <span data-theme-text>light</span></button>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>// for the regulars</span>
+    <h1 class="title" style="font-size:clamp(34px,9vw,56px)">Earned a <span class="grad-text">cup at a time</span>.</h1>
+    <p class="lead reveal">Five tiers. Free drinks, first dibs on events and new drops, and the odd little surprise from the people behind the counter. The names just mark how long you've been part of the place. <span class="ph" style="font-family:var(--font-mono);font-size:0.9em;color:var(--champagne)">[Sample perks — set your real rewards.]</span></p>
+
+    <div class="prog reveal" aria-hidden="true">
+      <div class="track"><span class="fill" data-fill></span></div>
+      <div class="labels"><span>Explorer</span><span>Builder</span><span>Architect</span><span>Founder</span><span>Visionary</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:24px">
+  <div class="wrap">
+    <div class="tier-cards" data-cine-group>
+      <div class="tcard2" data-cine-item>
+        <span class="lvl mono">tier 01</span><span class="nm">Explorer</span>
+        <ul><li>Welcome drink on the house</li><li>Birthday coffee</li><li>Points on every cup</li></ul>
+      </div>
+      <div class="tcard2" data-cine-item>
+        <span class="lvl mono">tier 02</span><span class="nm">Builder</span>
+        <ul><li>Every 9th drink free</li><li>Early event sign-ups</li><li>Size upgrades</li></ul>
+      </div>
+      <div class="tcard2" data-cine-item>
+        <span class="lvl mono">tier 03</span><span class="nm">Architect</span>
+        <ul><li>Free extras &amp; syrups</li><li>First taste of new drops</li><li>Members-only roasts</li></ul>
+      </div>
+      <div class="tcard2" data-cine-item>
+        <span class="lvl mono">tier 04</span><span class="nm">Founder</span>
+        <ul><li>Bring-a-friend free cup</li><li>Reserved event seats</li><li>Seasonal gift</li></ul>
+      </div>
+      <div class="tcard2" data-cine-item>
+        <span class="lvl mono">tier 05</span><span class="nm">Visionary</span>
+        <ul><li>A drink named after you</li><li>Behind-the-bar sessions</li><li>The good stuff, first</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-label reveal">// how it works</div>
+    <h2 class="reveal">No card to lose. No maths to do.</h2>
+    <div class="how" data-cine-group>
+      <div class="step" data-cine-item><div class="n mono">01</div><h3>Order like normal</h3><p>Scan once at the counter or in the app. That's the whole sign-up.</p></div>
+      <div class="step" data-cine-item><div class="n mono">02</div><h3>Collect cups</h3><p>Every drink counts. Tiers unlock automatically as you go — nothing to track.</p></div>
+      <div class="step" data-cine-item><div class="n mono">03</div><h3>Get looked after</h3><p>Free drinks, early access, and small surprises land as you climb.</p></div>
+    </div>
+
+    <div class="signup reveal">
+      <div class="sec-label" style="margin-bottom:8px">// join the lab</div>
+      <h2 style="margin-bottom:6px">Start at Explorer today.</h2>
+      <p class="lead">Drop your email and we'll send your first-cup reward and tell you when a Brew Lab opens near you.</p>
+      <form data-demo-form onsubmit="return false">
+        <label class="sr-only" for="rw-email">Email address</label>
+        <input id="rw-email" type="email" name="email" placeholder="you@example.com" required>
+        <button class="btn btn-primary magnetic" data-magnetic="0.2" type="submit">Join rewards →</button>
+      </form>
+      <p class="ph" style="margin-top:12px">[Demo form — wire to your email provider (Mailchimp / Formspree) before launch.]</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px"><span class="braces">{ }</span> The Brew Lab</a>
+        <p class="foot-meta">A coffee house for people with something to make.<br>Born on a campus. Growing one neighbourhood at a time.</p>
+        <nav class="foot-nav" aria-label="Footer">
+          <a href="menu.html">Menu</a><a href="rewards.html">Rewards</a><a href="story.html">Story</a><a href="franchise.html">Partner with us</a><a href="pitch.html">Pitch deck</a>
+        </nav>
+      </div>
+      <div class="foot-code mono" aria-hidden="true">
+<span class="kw">while</span><span class="pun">(</span><span class="prop">alive</span><span class="pun">){</span>
+  <span class="fn">drinkCoffee</span><span class="pun">();</span>
+  <span class="fn">create</span><span class="pun">();</span>
+  <span class="fn">connect</span><span class="pun">();</span>
+<span class="pun">}</span>
+      </div>
+    </div>
+    <div class="foot-sig"><b>THE BREW LAB</b> · Brew Ideas. · Coffee. Create. Connect. <span style="margin-left:auto;opacity:.7;">© 2026</span></div>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+<script>
+  // animate the progression rail when it scrolls into view (no dependency)
+  (function(){
+    var fill = document.querySelector('[data-fill]');
+    if(!fill) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches){ fill.style.transition='none'; fill.style.width='100%'; return; }
+    if(!('IntersectionObserver' in window)){ fill.style.width='100%'; return; }
+    new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){fill.style.width='100%';o.disconnect();}});},{threshold:0.4}).observe(fill);
+  })();
+</script>
+</body>
+</html>

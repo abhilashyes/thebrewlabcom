@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Partner with us — The Brew Lab</title>
+<meta name="description" content="Open a Brew Lab. Partnership models for universities, property owners, franchisees and investors. Start a conversation.">
+<meta name="theme-color" content="#0F1117">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Partner with us — The Brew Lab">
+<meta property="og:description" content="Campus, property, franchise or investment — let's build the next one together.">
+<meta property="og:image" content="assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<script>try{var t=localStorage.getItem('brewlab-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/effects.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://esm.sh/three@0.161.0",
+    "gsap": "https://esm.sh/gsap@3.12.5",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.5/ScrollTrigger.js",
+    "lenis": "https://esm.sh/lenis@1.1.13"
+  }
+}
+</script>
+<style>
+  .models { display:grid; grid-template-columns:1fr; gap:14px; margin-top:42px; }
+  @media (min-width:760px){ .models { grid-template-columns:repeat(2,1fr); } }
+  .model { background:var(--editor); border:1px solid var(--line); border-radius:var(--r-xl); padding:26px 24px; transition:transform var(--t-base) ease, border-color var(--t-base) ease; }
+  .model:hover { transform:translateY(-4px); border-color:var(--lavender); }
+  .model .tag { font-family:var(--font-mono); font-size:11px; letter-spacing:0.04em; color:var(--cyan); }
+  .model h3 { font-size:21px; font-weight:700; letter-spacing:-0.02em; margin:8px 0 8px; }
+  .model p { color:var(--muted); font-size:14.5px; }
+  .model ul { list-style:none; display:grid; gap:7px; margin-top:14px; }
+  .model li { font-size:13.5px; color:var(--muted); display:flex; gap:8px; }
+  .model li::before { content:"›"; color:var(--lavender); }
+  .model:nth-child(2) .tag{color:var(--champagne);} .model:nth-child(3) .tag{color:var(--lavender);} .model:nth-child(4) .tag{color:var(--rose);}
+  .steps { display:grid; grid-template-columns:1fr; gap:14px; margin-top:42px; }
+  @media (min-width:680px){ .steps { grid-template-columns:repeat(4,1fr); } }
+  .pstep { background:var(--editor); border:1px solid var(--line); border-radius:var(--r-lg); padding:20px 18px; }
+  .pstep .n { font-family:var(--font-mono); color:var(--cyan); font-size:12px; margin-bottom:8px; }
+  .pstep h3 { font-size:16px; font-weight:700; margin-bottom:5px; }
+  .pstep p { color:var(--muted); font-size:13.5px; }
+  .faq { margin-top:42px; display:grid; gap:10px; }
+  .faq details { background:var(--editor); border:1px solid var(--line); border-radius:var(--r-lg); padding:0 20px; }
+  .faq summary { cursor:pointer; padding:18px 0; font-weight:600; font-size:15.5px; list-style:none; display:flex; justify-content:space-between; gap:12px; align-items:center; }
+  .faq summary::-webkit-details-marker { display:none; }
+  .faq summary::after { content:"+"; font-family:var(--font-mono); color:var(--lavender); font-size:20px; }
+  .faq details[open] summary::after { content:"–"; }
+  .faq p { color:var(--muted); font-size:14px; padding:0 0 18px; }
+  .inquire { margin-top:52px; background:var(--glass); border:1px solid var(--line); border-radius:var(--r-xl); padding:clamp(24px,5vw,40px); }
+  .form-grid { display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px; }
+  @media (min-width:640px){ .form-grid { grid-template-columns:1fr 1fr; } }
+  .field { display:flex; flex-direction:column; gap:6px; }
+  .field.full { grid-column:1/-1; }
+  .field label { font-family:var(--font-mono); font-size:12px; color:var(--muted); }
+  .field input, .field select, .field textarea { min-height:48px; padding:12px 14px; border-radius:var(--r-md); border:1px solid var(--line); background:var(--editor); color:var(--text); font-family:var(--font-sans); font-size:15px; }
+  .field textarea { min-height:120px; resize:vertical; }
+  .field :focus-visible { outline:2px solid var(--lavender); outline-offset:2px; }
+  .ph { font-family:var(--font-mono); font-size:0.9em; color:var(--champagne); }
+</style>
+</head>
+<body data-page="franchise">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ambient" aria-hidden="true"></div>
+
+<nav aria-label="Primary">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="braces">{ }</span> The Brew Lab</a>
+    <button class="nav-burger" data-nav-burger aria-label="Open menu" aria-expanded="false" aria-controls="navmenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <div class="nav-links nav-menu" id="navmenu" data-nav-menu>
+      <button class="nav-menu-close" data-nav-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="menu.html">Menu</a>
+      <a class="navlink" href="rewards.html">Rewards</a>
+      <a class="navlink" href="story.html">Story</a>
+      <a class="navlink" href="franchise.html" aria-current="page">Partner</a>
+      <a class="navlink" href="pitch.html">Pitch</a>
+      <button class="toggle" data-theme-toggle aria-label="Toggle theme"><span data-theme-icon aria-hidden="true">◑</span> <span data-theme-text>light</span></button>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>// partner with us</span>
+    <h1 class="title" style="font-size:clamp(34px,9vw,56px)">Open a Brew Lab<br><span class="grad-text">with us</span>.</h1>
+    <p class="lead reveal">We're growing one neighbourhood at a time — and we'd rather do it with the right people than the fastest ones. If you've got a campus, a corner, capital, or a community that deserves a better cup, let's talk.</p>
+    <div class="cta-row" style="margin-top:26px">
+      <a href="#inquire" class="btn btn-primary magnetic" data-magnetic="0.25">Start a conversation →</a>
+      <a href="pitch.html" class="btn btn-ghost magnetic" data-magnetic="0.25">See the pitch deck</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-label reveal">// ways to work together</div>
+    <h2 class="reveal">Four ways in.</h2>
+    <div class="models" data-cine-group>
+      <div class="model" data-cine-item>
+        <span class="tag mono">// for universities</span>
+        <h3>Campus partner</h3>
+        <p>Bring The Brew Lab to your students and staff — a flagship space or a smart kiosk that becomes the heart of the day.</p>
+        <ul><li>Turnkey fit-out &amp; ops</li><li>Student rewards built in</li><li>Events &amp; community programming</li></ul>
+      </div>
+      <div class="model" data-cine-item>
+        <span class="tag mono">// for property owners</span>
+        <h3>Location / landlord</h3>
+        <p>Have a high-footfall corner, lobby, or transit spot? We'll turn it into a reason people show up early.</p>
+        <ul><li>Strong anchor tenant</li><li>Flexible lease &amp; revenue share</li><li>Foot traffic that lifts neighbours</li></ul>
+      </div>
+      <div class="model" data-cine-item>
+        <span class="tag mono">// for operators</span>
+        <h3>Franchisee</h3>
+        <p>Run your own Brew Lab with our brand, supply chain, training, and playbook behind you.</p>
+        <ul><li>Proven unit model <span class="ph">[details on request]</span></li><li>Full training &amp; launch support</li><li>Brand, app &amp; loyalty included</li></ul>
+      </div>
+      <div class="model" data-cine-item>
+        <span class="tag mono">// for investors</span>
+        <h3>Investor</h3>
+        <p>Back a brand with real retention and a repeatable expansion model. We'll share the numbers.</p>
+        <ul><li>Loyalty-driven repeat revenue</li><li>Multi-site roadmap</li><li>Data room on request <span class="ph">[placeholder]</span></li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-label reveal">// how it goes</div>
+    <h2 class="reveal">From hello to open.</h2>
+    <div class="steps" data-cine-group>
+      <div class="pstep" data-cine-item><div class="n mono">01</div><h3>Say hello</h3><p>Tell us about your space, campus, or thesis. We reply within a few days.</p></div>
+      <div class="pstep" data-cine-item><div class="n mono">02</div><h3>Fit &amp; numbers</h3><p>We share the model and check the site works for both of us.</p></div>
+      <div class="pstep" data-cine-item><div class="n mono">03</div><h3>Design &amp; build</h3><p>Fit-out, kit, training, and the brand system — handled together.</p></div>
+      <div class="pstep" data-cine-item><div class="n mono">04</div><h3>Open &amp; grow</h3><p>Launch, dial in the rituals, and build the regulars from day one.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-label reveal">// good to know</div>
+    <h2 class="reveal">Questions, answered.</h2>
+    <div class="faq reveal">
+      <details><summary>What does it cost to open one?</summary><p>It depends on format — kiosk, neighbourhood store, or campus flagship. We'll walk you through the full investment and unit economics on a call. <span class="ph">[Add real figures.]</span></p></details>
+      <details><summary>Do I need coffee experience?</summary><p>No. Our training and launch team get you and your baristas ready, and the playbook covers the day-to-day.</p></details>
+      <details><summary>How long from signing to opening?</summary><p>Typically a few months depending on the site and fit-out. <span class="ph">[Confirm your real timeline.]</span></p></details>
+      <details><summary>Which regions are you opening in?</summary><p>We're prioritising campuses and high-footfall neighbourhoods near our existing sites, but we read every inbound. <span class="ph">[List target regions.]</span></p></details>
+    </div>
+  </div>
+</section>
+
+<section id="inquire" style="padding-top:0">
+  <div class="wrap">
+    <div class="inquire reveal">
+      <div class="sec-label" style="margin-bottom:8px">// start a conversation</div>
+      <h2 style="margin-bottom:6px">Tell us what you've got in mind.</h2>
+      <p class="lead">Fill this in and we'll get back to you. Prefer email? Reach us at <a href="mailto:partners@thebrewlab.example?subject=Partnership%20inquiry" style="color:var(--lavender)">partners@thebrewlab.example</a>.</p>
+      <form class="form-grid" action="mailto:partners@thebrewlab.example" method="post" enctype="text/plain" data-demo-form>
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" required></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required></div>
+        <div class="field"><label for="f-type">I'm a…</label>
+          <select id="f-type" name="type">
+            <option>University / campus</option>
+            <option>Property owner / landlord</option>
+            <option>Prospective franchisee</option>
+            <option>Investor</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-loc">Location / region</label><input id="f-loc" name="location" type="text"></div>
+        <div class="field full"><label for="f-msg">A bit more</label><textarea id="f-msg" name="message" placeholder="Tell us about the space, campus, or idea…"></textarea></div>
+        <div class="field full">
+          <button class="btn btn-primary magnetic" data-magnetic="0.2" type="submit">Send inquiry →</button>
+          <p class="ph" style="margin-top:10px">[Demo form — opens your mail app. Wire to Formspree / your CRM before launch.]</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px"><span class="braces">{ }</span> The Brew Lab</a>
+        <p class="foot-meta">A coffee house for people with something to make.<br>Born on a campus. Growing one neighbourhood at a time.</p>
+        <nav class="foot-nav" aria-label="Footer">
+          <a href="menu.html">Menu</a><a href="rewards.html">Rewards</a><a href="story.html">Story</a><a href="franchise.html">Partner with us</a><a href="pitch.html">Pitch deck</a>
+        </nav>
+      </div>
+      <div class="foot-code mono" aria-hidden="true">
+<span class="kw">while</span><span class="pun">(</span><span class="prop">alive</span><span class="pun">){</span>
+  <span class="fn">drinkCoffee</span><span class="pun">();</span>
+  <span class="fn">create</span><span class="pun">();</span>
+  <span class="fn">connect</span><span class="pun">();</span>
+<span class="pun">}</span>
+      </div>
+    </div>
+    <div class="foot-sig"><b>THE BREW LAB</b> · Brew Ideas. · Coffee. Create. Connect. <span style="margin-left:auto;opacity:.7;">© 2026</span></div>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

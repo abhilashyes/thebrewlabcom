@@ -1,0 +1,92 @@
+/* ============================================================
+   The Brew Lab — Design Tokens
+   Single source of truth. Colors are verbatim from the brand
+   reference. No other stylesheet should hardcode hex values.
+   ============================================================ */
+
+:root {
+  /* ---- color: dark (default) ---- */
+  --bg: #0F1117;
+  --sidebar: #161A22;
+  --editor: #1B202B;
+  --lavender: #A78BFA;   /* primary accent */
+  --cyan: #7DD3FC;
+  --champagne: #E9CBA7;
+  --rose: #F4A8C5;
+  --text: #F5F7FA;
+  --muted: #98A1B2;
+  --line: rgba(255, 255, 255, 0.06);
+  --glass: rgba(27, 32, 43, 0.55);
+  --glow: rgba(167, 139, 250, 0.22);
+  --shadow: rgba(0, 0, 0, 0.55);
+
+  /* on-accent text (sits on lavender/cyan fills) */
+  --on-accent: #0F1117;
+
+  /* signature gradient */
+  --grad: linear-gradient(110deg, var(--lavender), var(--rose) 55%, var(--champagne));
+  --grad-soft: linear-gradient(140deg, var(--lavender), transparent 40%, transparent 70%, var(--cyan));
+
+  /* ---- type ---- */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  /* fluid type scale (mobile-first via clamp) */
+  --fs-eyebrow: clamp(11.5px, 2.6vw, 12.5px);
+  --fs-body: clamp(15px, 3.6vw, 17px);
+  --fs-lead: clamp(15.5px, 3.8vw, 17px);
+  --fs-h3: clamp(18px, 4.4vw, 21px);
+  --fs-h2: clamp(26px, 6.2vw, 42px);
+  --fs-h1: clamp(38px, 11vw, 68px);
+  --fs-display: clamp(26px, 6vw, 40px);
+
+  /* ---- spacing (fluid) ---- */
+  --space-section: clamp(64px, 12vw, 96px);
+  --space-gap: clamp(20px, 5vw, 56px);
+  --wrap-max: 1180px;
+  --wrap-pad: clamp(18px, 5vw, 28px);
+
+  /* ---- radius ---- */
+  --r-sm: 7px;
+  --r-md: 12px;
+  --r-lg: 14px;
+  --r-xl: 16px;
+  --r-pill: 999px;
+
+  /* ---- elevation ---- */
+  --elev-card: 0 30px 80px var(--shadow), 0 0 0 1px var(--line);
+  --elev-btn: 0 8px 28px var(--glow);
+  --elev-btn-hover: 0 12px 36px var(--glow);
+
+  /* ---- motion ---- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --t-fast: 0.15s;
+  --t-base: 0.25s;
+  --t-slow: 0.5s;
+
+  /* ---- chrome dots (traffic lights) ---- */
+  --dot-red: #FF5F57;
+  --dot-yellow: #FEBC2E;
+  --dot-green: #28C840;
+
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #FAFAFC;
+  --sidebar: #F4F5F8;
+  --editor: #FFFFFF;
+  --lavender: #7C5CFA;
+  --cyan: #0891B2;
+  --champagne: #B07B4E;
+  --rose: #DB7093;
+  --text: #1A1D26;
+  --muted: #6B7280;
+  --line: rgba(15, 17, 23, 0.08);
+  --glass: rgba(255, 255, 255, 0.7);
+  --glow: rgba(124, 92, 250, 0.16);
+  --shadow: rgba(15, 17, 23, 0.10);
+  --on-accent: #FFFFFF;
+
+  color-scheme: light;
+}

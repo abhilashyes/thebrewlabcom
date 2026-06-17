@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Menu — The Brew Lab</title>
+<meta name="description" content="What we pour at The Brew Lab — espresso, filter, lab signatures, cold, and a little something to eat. Sample menu.">
+<meta name="theme-color" content="#0F1117">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Menu — The Brew Lab">
+<meta property="og:description" content="Espresso, filter, lab signatures, cold and bites.">
+<meta property="og:image" content="assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<script>try{var t=localStorage.getItem('brewlab-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/effects.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://esm.sh/three@0.161.0",
+    "gsap": "https://esm.sh/gsap@3.12.5",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.5/ScrollTrigger.js",
+    "lenis": "https://esm.sh/lenis@1.1.13"
+  }
+}
+</script>
+<style>
+  .menu-cat { margin-top: 40px; }
+  .menu-cat > .cat-head { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:18px; flex-wrap:wrap; }
+  .menu-cat .cat-head h2 { margin:0; font-size: clamp(22px,5.4vw,30px); }
+  .menu-cat .cat-head .k { font-family:var(--font-mono); font-size:12px; color:var(--cyan); }
+  .menu-grid { display:grid; grid-template-columns:1fr; gap:12px; }
+  @media (min-width:680px){ .menu-grid { grid-template-columns:1fr 1fr; gap:14px; } }
+  .mitem { background:var(--editor); border:1px solid var(--line); border-radius:var(--r-lg); padding:18px 20px; transition:border-color var(--t-base) ease, transform var(--t-base) ease; }
+  .mitem:hover { border-color:var(--lavender); transform:translateY(-3px); }
+  .mitem .row { display:flex; align-items:baseline; justify-content:space-between; gap:10px; }
+  .mitem h3 { font-size:16.5px; font-weight:700; letter-spacing:-0.01em; }
+  .mitem .price { font-family:var(--font-mono); font-size:14px; color:var(--champagne); white-space:nowrap; }
+  .mitem p { color:var(--muted); font-size:13.5px; margin-top:5px; }
+  .mitem .badge { display:inline-block; font-family:var(--font-mono); font-size:10.5px; color:var(--lavender); border:1px solid var(--line); border-radius:var(--r-pill); padding:2px 8px; margin-top:8px; }
+  .menu-note { margin-top:48px; font-family:var(--font-mono); font-size:12.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:22px; }
+  .ph { font-family:var(--font-mono); font-size:0.9em; color:var(--champagne); }
+</style>
+</head>
+<body data-page="menu">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ambient" aria-hidden="true"></div>
+
+<nav aria-label="Primary">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="braces">{ }</span> The Brew Lab</a>
+    <button class="nav-burger" data-nav-burger aria-label="Open menu" aria-expanded="false" aria-controls="navmenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <div class="nav-links nav-menu" id="navmenu" data-nav-menu>
+      <button class="nav-menu-close" data-nav-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="menu.html" aria-current="page">Menu</a>
+      <a class="navlink" href="rewards.html">Rewards</a>
+      <a class="navlink" href="story.html">Story</a>
+      <a class="navlink" href="franchise.html">Partner</a>
+      <a class="navlink" href="pitch.html">Pitch</a>
+      <button class="toggle" data-theme-toggle aria-label="Toggle theme"><span data-theme-icon aria-hidden="true">◑</span> <span data-theme-text>light</span></button>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>// the menu</span>
+    <h1 class="title" style="font-size:clamp(34px,9vw,56px)">What's <span class="grad-text">brewing</span>.</h1>
+    <p class="lead reveal">A short, sharp list we actually stand behind — pulled with care, priced like a habit. <span class="ph">[Sample items &amp; prices — swap for your real menu.]</span></p>
+  </div>
+</section>
+
+<section style="padding-top:40px">
+  <div class="wrap">
+
+    <div class="menu-cat reveal">
+      <div class="cat-head"><h2>Espresso</h2><span class="k mono">// the classics</span></div>
+      <div class="menu-grid" data-cine-group>
+        <div class="mitem" data-cine-item><div class="row"><h3>Espresso</h3><span class="price">$<span class="ph">3.0</span></span></div><p>A clean, balanced double. The control sample.</p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Flat White</h3><span class="price">$<span class="ph">4.2</span></span></div><p>Velvet microfoam, ristretto base. Our quiet favourite.</p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Latte</h3><span class="price">$<span class="ph">4.5</span></span></div><p>Smooth, milky, dependable. Hot or iced.</p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Cappuccino</h3><span class="price">$<span class="ph">4.2</span></span></div><p>Equal parts espresso, steamed milk, foam.</p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Cortado</h3><span class="price">$<span class="ph">4.0</span></span></div><p>Two-to-one, cut just right. No fuss.</p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Mocha</h3><span class="price">$<span class="ph">4.8</span></span></div><p>Single-origin chocolate, pulled long.</p></div>
+      </div>
+    </div>
+
+    <div class="menu-cat reveal">
+      <div class="cat-head"><h2>Filter &amp; Brew</h2><span class="k mono">// the slow lane</span></div>
+      <div class="menu-grid" data-cine-group>
+        <div class="mitem" data-cine-item><div class="row"><h3>Batch Brew</h3><span class="price">$<span class="ph">3.2</span></span></div><p>Rotating single origin, brewed fresh all day.</p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Pour Over</h3><span class="price">$<span class="ph">5.0</span></span></div><p>Made to order, one cup at a time. <span class="badge">ask the bar</span></p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Americano</h3><span class="price">$<span class="ph">3.5</span></span></div><p>Espresso, hot water, long and easy.</p></div>
+      </div>
+    </div>
+
+    <div class="menu-cat reveal">
+      <div class="cat-head"><h2>Lab Signatures</h2><span class="k mono">// experiments that stuck</span></div>
+      <div class="menu-grid" data-cine-group>
+        <div class="mitem" data-cine-item><div class="row"><h3>The Compiler</h3><span class="price">$<span class="ph">5.5</span></span></div><p>Espresso, brown butter, sea salt. Runs every morning. <span class="badge">house special</span></p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Lavender Haze</h3><span class="price">$<span class="ph">5.5</span></span></div><p>Lavender, honey, oat milk. Soft on the edges.</p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Infinity Cold Brew</h3><span class="price">$<span class="ph">4.8</span></span></div><p>18-hour steep. Smooth, no bitterness, big caffeine.</p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Champagne Tonic</h3><span class="price">$<span class="ph">5.5</span></span></div><p>Espresso, tonic, citrus. Bright and fizzy.</p></div>
+      </div>
+    </div>
+
+    <div class="menu-cat reveal">
+      <div class="cat-head"><h2>Cold &amp; Non-Coffee</h2><span class="k mono">// for everyone</span></div>
+      <div class="menu-grid" data-cine-group>
+        <div class="mitem" data-cine-item><div class="row"><h3>Iced Matcha</h3><span class="price">$<span class="ph">5.0</span></span></div><p>Ceremonial grade, whisked, over ice.</p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Hot Chocolate</h3><span class="price">$<span class="ph">4.5</span></span></div><p>Proper dark chocolate, steamed milk.</p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Chai Latte</h3><span class="price">$<span class="ph">4.5</span></span></div><p>House-spiced, not too sweet.</p></div>
+      </div>
+    </div>
+
+    <div class="menu-cat reveal">
+      <div class="cat-head"><h2>A Little Something</h2><span class="k mono">// bites</span></div>
+      <div class="menu-grid" data-cine-group>
+        <div class="mitem" data-cine-item><div class="row"><h3>Butter Croissant</h3><span class="price">$<span class="ph">3.5</span></span></div><p>Laminated daily. Gone by ten.</p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Banana Bread</h3><span class="price">$<span class="ph">4.0</span></span></div><p>Toasted, with a little butter on request.</p></div>
+        <div class="mitem" data-cine-item><div class="row"><h3>Cookie of the Day</h3><span class="price">$<span class="ph">3.0</span></span></div><p>Ask what's in the case. <span class="badge">rotates</span></p></div>
+      </div>
+    </div>
+
+    <p class="menu-note">// oat, soy &amp; lactose-free milks at no charge · decaf on every drink · allergens: ask the bar.<br>// <span class="ph">[Prices and items are samples — replace with your real menu before launch.]</span></p>
+
+    <div class="cta-row" style="margin-top:32px">
+      <a href="rewards.html" class="btn btn-primary magnetic" data-magnetic="0.25">Earn rewards on every cup →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px"><span class="braces">{ }</span> The Brew Lab</a>
+        <p class="foot-meta">A coffee house for people with something to make.<br>Born on a campus. Growing one neighbourhood at a time.</p>
+        <nav class="foot-nav" aria-label="Footer">
+          <a href="menu.html">Menu</a><a href="rewards.html">Rewards</a><a href="story.html">Story</a><a href="franchise.html">Partner with us</a><a href="pitch.html">Pitch deck</a>
+        </nav>
+      </div>
+      <div class="foot-code mono" aria-hidden="true">
+<span class="kw">while</span><span class="pun">(</span><span class="prop">alive</span><span class="pun">){</span>
+  <span class="fn">drinkCoffee</span><span class="pun">();</span>
+  <span class="fn">create</span><span class="pun">();</span>
+  <span class="fn">connect</span><span class="pun">();</span>
+<span class="pun">}</span>
+      </div>
+    </div>
+    <div class="foot-sig"><b>THE BREW LAB</b> · Brew Ideas. · Coffee. Create. Connect. <span style="margin-left:auto;opacity:.7;">© 2026</span></div>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

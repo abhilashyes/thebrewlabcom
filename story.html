@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Story, Events &amp; Locations — The Brew Lab</title>
+<meta name="description" content="The Brew Lab was never really about the coffee. Our story, the meetups, and where to find us.">
+<meta name="theme-color" content="#0F1117">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Story, Events &amp; Locations — The Brew Lab">
+<meta property="og:description" content="Born on a campus. Growing one neighbourhood at a time.">
+<meta property="og:image" content="assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<script>try{var t=localStorage.getItem('brewlab-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/effects.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://esm.sh/three@0.161.0",
+    "gsap": "https://esm.sh/gsap@3.12.5",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.5/ScrollTrigger.js",
+    "lenis": "https://esm.sh/lenis@1.1.13"
+  }
+}
+</script>
+<style>
+  .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:44px; }
+  @media (min-width:680px){ .stats { grid-template-columns:repeat(4,1fr); } }
+  .stat { background:var(--editor); border:1px solid var(--line); border-radius:var(--r-lg); padding:22px 18px; }
+  .stat .big { font-size:clamp(28px,7vw,44px); font-weight:800; letter-spacing:-0.03em; }
+  .stat .lab { font-family:var(--font-mono); font-size:11.5px; color:var(--muted); margin-top:6px; }
+  .stat:nth-child(1) .big{color:var(--lavender);} .stat:nth-child(2) .big{color:var(--cyan);}
+  .stat:nth-child(3) .big{color:var(--champagne);} .stat:nth-child(4) .big{color:var(--rose);}
+  .events { display:grid; gap:12px; margin-top:38px; }
+  .event { display:flex; gap:18px; align-items:flex-start; background:var(--editor); border:1px solid var(--line); border-radius:var(--r-lg); padding:20px 22px; transition:border-color var(--t-base) ease; flex-wrap:wrap; }
+  .event:hover { border-color:var(--lavender); }
+  .event .when { font-family:var(--font-mono); font-size:12px; color:var(--cyan); min-width:120px; }
+  .event h3 { font-size:17px; font-weight:700; }
+  .event p { color:var(--muted); font-size:14px; margin-top:4px; }
+  .locs { display:grid; grid-template-columns:1fr; gap:14px; margin-top:38px; }
+  @media (min-width:760px){ .locs { grid-template-columns:repeat(3,1fr); } }
+  .loc { background:var(--editor); border:1px solid var(--line); border-radius:var(--r-lg); padding:22px 20px; }
+  .loc .pin { font-family:var(--font-mono); font-size:11px; color:var(--lavender); margin-bottom:10px; }
+  .loc h3 { font-size:18px; font-weight:700; margin-bottom:4px; }
+  .loc p { color:var(--muted); font-size:13.5px; line-height:1.7; }
+  .map-ph { margin-top:30px; height:clamp(180px,40vw,300px); border-radius:var(--r-xl); border:1px solid var(--line); background:
+      linear-gradient(0deg, var(--line) 1px, transparent 1px) 0 0/100% 32px,
+      linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0/32px 100%, var(--editor);
+    display:grid; place-items:center; }
+  .map-ph span { font-family:var(--font-mono); font-size:12.5px; color:var(--muted); background:color-mix(in srgb,var(--bg) 70%,transparent); padding:8px 14px; border-radius:var(--r-pill); border:1px solid var(--line); }
+  .ph { font-family:var(--font-mono); font-size:0.9em; color:var(--champagne); }
+</style>
+</head>
+<body data-page="story">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ambient" aria-hidden="true"></div>
+
+<nav aria-label="Primary">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="braces">{ }</span> The Brew Lab</a>
+    <button class="nav-burger" data-nav-burger aria-label="Open menu" aria-expanded="false" aria-controls="navmenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <div class="nav-links nav-menu" id="navmenu" data-nav-menu>
+      <button class="nav-menu-close" data-nav-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="menu.html">Menu</a>
+      <a class="navlink" href="rewards.html">Rewards</a>
+      <a class="navlink" href="story.html" aria-current="page">Story</a>
+      <a class="navlink" href="franchise.html">Partner</a>
+      <a class="navlink" href="pitch.html">Pitch</a>
+      <button class="toggle" data-theme-toggle aria-label="Toggle theme"><span data-theme-icon aria-hidden="true">◑</span> <span data-theme-text>light</span></button>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>// our story</span>
+    <h1 class="title" style="font-size:clamp(34px,9vw,56px)">Never really about<br><span class="grad-text">the coffee</span>.</h1>
+    <p class="lead reveal">It started on a campus — a cart, a queue, and a stubborn belief that a good cup and a familiar face could change the shape of someone's day. It's about the ideas, the conversations, the people, and the small, steady warmth of somewhere good things begin.</p>
+    <div class="stats" data-cine-group>
+      <div class="stat" data-cine-item><div class="big count" data-count="2021">2021</div><div class="lab mono">// first cart, campus</div></div>
+      <div class="stat" data-cine-item><div class="big count" data-count="120" data-suffix="k+">120k+</div><div class="lab mono">// cups poured <span class="ph">[sample]</span></div></div>
+      <div class="stat" data-cine-item><div class="big count" data-count="5">5</div><div class="lab mono">// loyalty tiers</div></div>
+      <div class="stat" data-cine-item><div class="big count" data-count="3" data-suffix=" &amp; counting">3 &amp; counting</div><div class="lab mono">// neighbourhoods <span class="ph">[sample]</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section data-parallax="0.12" aria-hidden="true" style="padding:40px 0">
+  <div class="wrap"><div class="map-ph" style="height:2px;border:none;background:var(--grad);opacity:.5;border-radius:2px"></div></div>
+</section>
+
+<section style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-label reveal">// what we believe</div>
+    <h2 class="reveal">Good coffee is the doorway. People are the room.</h2>
+    <p class="lead reveal">We keep the cup honest and the price fair so the habit is easy to keep. Then we do the harder part: making a place where regulars become familiar faces, and familiar faces become a little community that shows up for each other.</p>
+  </div>
+</section>
+
+<section id="events" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-label reveal">// meetups &amp; events</div>
+    <h2 class="reveal">When there's time to linger.</h2>
+    <p class="lead reveal">Regular get-togethers that bring everyone back together. <span class="ph">[Sample listings — replace with real events.]</span></p>
+    <div class="events" data-cine-group>
+      <div class="event" data-cine-item><div class="when mono">Thu · weekly</div><div><h3>Build Night</h3><p>Bring a project, share a table, trade ideas over the last brew of the day.</p></div></div>
+      <div class="event" data-cine-item><div class="when mono">1st Sat · monthly</div><div><h3>Cupping &amp; New Drops</h3><p>Taste the next single origins before they hit the board. Members first.</p></div></div>
+      <div class="event" data-cine-item><div class="when mono">Sun · fortnightly</div><div><h3>Quiet Hours</h3><p>Low lights, lo-fi, no rush. Good for reading, sketching, slow mornings.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="locations" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-label reveal">// find us</div>
+    <h2 class="reveal">Where to grab one to go.</h2>
+    <p class="lead reveal"><span class="ph">[Sample locations — add your real addresses &amp; hours.]</span></p>
+    <div class="locs" data-cine-group>
+      <div class="loc" data-cine-item><div class="pin mono">◍ flagship</div><h3>Campus Lab</h3><p>123 University Walk<br>Mon–Fri 7a–6p · Sat 8a–4p<br><span class="ph">[placeholder]</span></p></div>
+      <div class="loc" data-cine-item><div class="pin mono">◍ neighbourhood</div><h3>High Street</h3><p>48 High Street<br>Daily 7a–5p<br><span class="ph">[placeholder]</span></p></div>
+      <div class="loc" data-cine-item><div class="pin mono">◍ kiosk</div><h3>Station Stop</h3><p>Central Station, East Concourse<br>Mon–Fri 6:30a–10a<br><span class="ph">[placeholder]</span></p></div>
+    </div>
+    <div class="map-ph reveal"><span>// map embed goes here — drop in Google Maps / Mapbox</span></div>
+    <div class="cta-row" style="margin-top:32px">
+      <a href="franchise.html" class="btn btn-primary magnetic" data-magnetic="0.25">Bring one to your neighbourhood →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px"><span class="braces">{ }</span> The Brew Lab</a>
+        <p class="foot-meta">A coffee house for people with something to make.<br>Born on a campus. Growing one neighbourhood at a time.</p>
+        <nav class="foot-nav" aria-label="Footer">
+          <a href="menu.html">Menu</a><a href="rewards.html">Rewards</a><a href="story.html">Story</a><a href="franchise.html">Partner with us</a><a href="pitch.html">Pitch deck</a>
+        </nav>
+      </div>
+      <div class="foot-code mono" aria-hidden="true">
+<span class="kw">while</span><span class="pun">(</span><span class="prop">alive</span><span class="pun">){</span>
+  <span class="fn">drinkCoffee</span><span class="pun">();</span>
+  <span class="fn">create</span><span class="pun">();</span>
+  <span class="fn">connect</span><span class="pun">();</span>
+<span class="pun">}</span>
+      </div>
+    </div>
+    <div class="foot-sig"><b>THE BREW LAB</b> · Brew Ideas. · Coffee. Create. Connect. <span style="margin-left:auto;opacity:.7;">© 2026</span></div>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
