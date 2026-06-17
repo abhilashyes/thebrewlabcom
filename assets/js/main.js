@@ -10,6 +10,18 @@ import { initTheme } from './theme.js';
 const root = document.documentElement;
 root.classList.add('js');
 
+/* Themed placeholder photos are hotlinked from a public source. If one
+   fails to load (source down, offline, blocked), degrade the frame to an
+   on-brand fallback instead of showing a broken-image icon. Capture phase
+   because <img> error events don't bubble. */
+document.addEventListener('error', (e) => {
+  const img = e.target;
+  if (img && img.tagName === 'IMG') {
+    const frame = img.closest('.frame');
+    if (frame) { frame.classList.add('img-failed'); img.remove(); }
+  }
+}, true);
+
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 const isSmall = window.matchMedia('(max-width: 820px)').matches;
