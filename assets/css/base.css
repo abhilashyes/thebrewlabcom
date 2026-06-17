@@ -18,6 +18,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  min-height: 100vh;
   min-height: 100dvh;
   transition: background var(--t-slow) ease, color var(--t-slow) ease;
 }
@@ -110,6 +111,7 @@ h2 {
 nav {
   position: sticky; top: 0; z-index: 50;
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  background: var(--bg); /* fallback when color-mix() is unsupported */
   background: color-mix(in srgb, var(--bg) 72%, transparent);
   border-bottom: 1px solid var(--line);
   padding-top: env(safe-area-inset-top);
@@ -160,6 +162,7 @@ nav {
 @media (max-width: 820px) {
   .nav-menu {
     position: fixed; inset: 0; z-index: 60;
+    background: var(--bg); /* fallback when color-mix() is unsupported */
     background: color-mix(in srgb, var(--bg) 94%, transparent);
     backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
     display: flex; flex-direction: column; justify-content: center;
