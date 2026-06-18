@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Pitch — The Brew Lab</title>
-<meta name="description" content="The Brew Lab pitch deck — for universities, property owners, franchisees and investors.">
+<meta name="description" content="The Brew Lab pitch — for universities, property owners, franchisees and investors. A coffee brand that compounds on loyalty.">
 <meta name="theme-color" content="#0F1117">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Pitch — The Brew Lab">
-<meta property="og:description" content="A coffee brand that compounds on loyalty. The deck.">
+<meta property="og:description" content="A coffee brand that compounds on loyalty. The pitch.">
 <meta property="og:image" content="assets/img/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
 <script>try{var t=localStorage.getItem('brewlab-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
@@ -18,170 +18,193 @@
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/effects.css">
-<link rel="stylesheet" href="assets/css/deck.css">
+<link rel="stylesheet" href="assets/css/pitch.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://esm.sh/three@0.161.0",
+    "gsap": "https://esm.sh/gsap@3.12.5",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.5/ScrollTrigger.js",
+    "lenis": "https://esm.sh/lenis@1.1.13"
+  }
+}
+</script>
 </head>
-<body data-page="deck" class="deck-body">
-<a class="skip-link" href="#slides">Skip to slides</a>
+<body data-page="pitch">
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="ambient" aria-hidden="true"></div>
-<p class="sr-only" data-deck-live role="status" aria-live="polite"></p>
+<div class="ps-progressbar" aria-hidden="true"><span class="fill" data-ps-progress></span></div>
 
-<header class="deck-bar">
-  <a class="deck-home" href="index.html" data-no-transition><span class="braces">{ }</span> The Brew Lab</a>
-  <div class="deck-progress" aria-hidden="true"><span class="bar" data-deck-bar></span></div>
-  <button class="toggle" data-theme-toggle aria-label="Toggle theme"><span data-theme-icon aria-hidden="true">◑</span> <span data-theme-text>light</span></button>
-</header>
+<nav aria-label="Primary">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="braces">{ }</span> The Brew Lab</a>
+    <button class="nav-burger" data-nav-burger aria-label="Open menu" aria-expanded="false" aria-controls="navmenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <div class="nav-links nav-menu" id="navmenu" data-nav-menu>
+      <button class="nav-menu-close" data-nav-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="menu.html">Menu</a>
+      <a class="navlink" href="rewards.html">Rewards</a>
+      <a class="navlink" href="story.html">Story</a>
+      <a class="navlink" href="franchise.html">Partner</a>
+      <a class="navlink" href="pitch.html" aria-current="page">Pitch</a>
+      <button class="toggle" data-theme-toggle aria-label="Toggle theme"><span data-theme-icon aria-hidden="true">◑</span> <span data-theme-text>light</span></button>
+    </div>
+  </div>
+</nav>
 
-<main id="slides" class="deck" data-deck aria-label="Pitch deck" aria-roledescription="carousel">
-  <div class="deck-track" data-deck-track>
+<main id="main">
+  <header class="ps-hero">
+    <div class="wrap">
+      <span class="kicker mono reveal">// pitch · 2026</span>
+      <h1 class="reveal">THE BREW LAB<br><span class="grad-text">Brew Ideas.</span></h1>
+      <p class="lead reveal">A coffee house for people with something to make — and a brand built to compound on loyalty, one neighbourhood at a time.</p>
+      <p class="ps-scrollcue reveal">scroll to begin <span class="arrow">↓</span></p>
+    </div>
+  </header>
 
-    <section class="slide title-slide" data-title="The Brew Lab">
-      <div class="slide-inner">
-        <span class="kicker mono">// pitch · 2026</span>
-        <h1>THE BREW LAB</h1>
-        <p class="s-mantra grad-text" style="font-size:clamp(20px,5vw,30px);font-weight:800">Brew Ideas.</p>
-        <p class="s-body" style="margin-top:10px">A coffee house for people with something to make — and a brand built to compound on loyalty, one neighbourhood at a time.</p>
-      </div>
-    </section>
+  <div class="wrap">
+    <div class="ps-layout">
 
-    <section class="slide" data-title="The insight">
-      <div class="slide-inner">
-        <span class="kicker mono">// 01 · the insight</span>
-        <h2 class="s-title">Coffee is a daily habit. Most cafés treat it like a transaction.</h2>
-        <p class="s-body">People don't switch coffee shops for taste alone — they stay for the place, the people, and being remembered. The cup gets them in the door; belonging keeps them coming back five times a week.</p>
-      </div>
-    </section>
-
-    <section class="slide" data-title="The concept">
-      <div class="slide-inner">
-        <span class="kicker mono">// 02 · the concept</span>
-        <h2 class="s-title">The two-minute ritual, engineered.</h2>
-        <ul class="points">
-          <li><span class="mk mono">›</span> <span><b>Exceptional coffee, habit pricing.</b> <span class="dim">A cup worth the walk, priced to repeat.</span></span></li>
-          <li><span class="mk mono">›</span> <span><b>Made to go.</b> <span class="dim">Order ahead, skip the queue, out in a minute.</span></span></li>
-          <li><span class="mk mono">›</span> <span><b>Built for regulars.</b> <span class="dim">A 5-tier loyalty ladder and a community that shows up.</span></span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="slide" data-title="Why now">
-      <div class="slide-inner">
-        <span class="kicker mono">// 03 · why now</span>
-        <h2 class="s-title">The moment is right.</h2>
-        <ul class="points">
-          <li><span class="mk mono">›</span> <span>Mobile order-ahead is now the expected default.</span></li>
-          <li><span class="mk mono">›</span> <span>A generation that wants third places, not just caffeine.</span></li>
-          <li><span class="mk mono">›</span> <span>Loyalty + app data make retention measurable and ownable.</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="slide" data-title="The experience">
-      <div class="slide-inner">
-        <span class="kicker mono">// 04 · the experience</span>
-        <h2 class="s-title">Coffee. Create. Connect.</h2>
-        <p class="s-body">A distinctive, design-led space — warm, modern, a little nerdy — where the order's already remembered, the cup's genuinely good, and the meetups turn a queue into a community.</p>
-      </div>
-    </section>
-
-    <section class="slide" data-title="Business model">
-      <div class="slide-inner">
-        <span class="kicker mono">// 05 · business model &amp; unit economics</span>
-        <h2 class="s-title">Repeat revenue, healthy cups.</h2>
-        <div class="metrics">
-          <div class="metric"><div class="big"><span class="ph">$X.X</span></div><div class="lab mono">avg ticket</div></div>
-          <div class="metric"><div class="big"><span class="ph">XX%</span></div><div class="lab mono">gross margin / cup</div></div>
-          <div class="metric"><div class="big"><span class="ph">X.X×</span></div><div class="lab mono">visits / week, members</div></div>
+      <aside class="ps-stage" aria-hidden="true">
+        <div class="ps-stage-orb"></div>
+        <div class="ps-stage-label">// the story</div>
+        <div class="ps-stage-meta">
+          <div class="ps-stage-num grad-text" data-stage-num>01</div>
+          <div class="ps-stage-word" data-stage-word>Insight</div>
         </div>
-        <p class="s-body" style="margin-top:18px"><span class="ph">[Placeholder figures — drop in your real unit economics: ticket, COGS, labour, rent, contribution margin, payback.]</span></p>
-      </div>
-    </section>
+        <ol class="ps-stage-nav" data-stage-nav></ol>
+      </aside>
 
-    <section class="slide" data-title="Loyalty engine">
-      <div class="slide-inner">
-        <span class="kicker mono">// 06 · the loyalty engine</span>
-        <h2 class="s-title">Five tiers that turn cups into retention.</h2>
-        <ul class="points">
-          <li><span class="mk mono">01</span> <span><b>Explorer</b> → <b>Builder</b> → <b>Architect</b> → <b>Founder</b> → <b>Visionary</b></span></li>
-          <li><span class="mk mono">›</span> <span>Automatic, app-native — no card, no friction.</span></li>
-          <li><span class="mk mono">›</span> <span>Drives frequency, first-party data, and word of mouth.</span></li>
-        </ul>
-      </div>
-    </section>
+      <div class="ps-chapters">
 
-    <section class="slide" data-title="Traction">
-      <div class="slide-inner">
-        <span class="kicker mono">// 07 · traction</span>
-        <h2 class="s-title">Proof, not promises.</h2>
-        <div class="metrics">
-          <div class="metric"><div class="big"><span class="ph">XXk</span></div><div class="lab mono">cups poured</div></div>
-          <div class="metric"><div class="big"><span class="ph">XX%</span></div><div class="lab mono">members repeat rate</div></div>
-          <div class="metric"><div class="big"><span class="ph">X</span></div><div class="lab mono">sites live</div></div>
-        </div>
-        <p class="s-body" style="margin-top:18px"><span class="ph">[Placeholder — add real traction: revenue, growth, retention cohorts, NPS, waitlist.]</span></p>
-      </div>
-    </section>
+        <section class="ps-chapter" data-chapter data-stage-num="01" data-stage-word="Insight" aria-labelledby="ch1">
+          <span class="kicker reveal">// 01 · the insight</span>
+          <h2 class="s-title reveal" id="ch1">Coffee is a daily habit. Most cafés treat it like a transaction.</h2>
+          <p class="s-body reveal">People don't switch coffee shops for taste alone — they stay for the place, the people, and being remembered. The cup gets them in the door; belonging keeps them coming back five times a week.</p>
+        </section>
 
-    <section class="slide" data-title="Market &amp; expansion">
-      <div class="slide-inner">
-        <span class="kicker mono">// 08 · market &amp; expansion</span>
-        <h2 class="s-title">Campuses first, then the corner of every busy street.</h2>
-        <p class="s-body">Start where density and routine are guaranteed — universities and transit — then expand into neighbourhoods through a repeatable, format-flexible playbook (kiosk → store → flagship). <span class="ph">[Add TAM/SAM and target regions.]</span></p>
-      </div>
-    </section>
+        <section class="ps-chapter" data-chapter data-stage-num="02" data-stage-word="Concept" aria-labelledby="ch2">
+          <span class="kicker reveal">// 02 · the concept</span>
+          <h2 class="s-title reveal" id="ch2">The two-minute ritual, engineered.</h2>
+          <ul class="points" data-cine-group>
+            <li data-cine-item><span class="mk mono">›</span> <span><b>Exceptional coffee, habit pricing.</b> <span class="dim">A cup worth the walk, made to repeat.</span></span></li>
+            <li data-cine-item><span class="mk mono">›</span> <span><b>Made to go.</b> <span class="dim">Order ahead, skip the queue, out in a minute.</span></span></li>
+            <li data-cine-item><span class="mk mono">›</span> <span><b>Built for regulars.</b> <span class="dim">A 5-tier loyalty ladder and a community that shows up.</span></span></li>
+          </ul>
+        </section>
 
-    <section class="slide" data-title="Partnership models">
-      <div class="slide-inner">
-        <span class="kicker mono">// 09 · ways to partner</span>
-        <h2 class="s-title">Four ways to build it with us.</h2>
-        <div class="models">
-          <div class="model"><h3><span class="tag mono">campus</span>Universities</h3><p>Flagship or kiosk at the heart of student life, rewards built in.</p></div>
-          <div class="model"><h3><span class="tag mono">property</span>Location owners</h3><p>A strong anchor tenant that lifts footfall for everyone nearby.</p></div>
-          <div class="model"><h3><span class="tag mono">operator</span>Franchisees</h3><p>Run your own with our brand, supply, training and playbook.</p></div>
-          <div class="model"><h3><span class="tag mono">capital</span>Investors</h3><p>Back a loyalty-led brand with a repeatable expansion model.</p></div>
-        </div>
-      </div>
-    </section>
+        <section class="ps-chapter" data-chapter data-stage-num="03" data-stage-word="Why now" aria-labelledby="ch3">
+          <span class="kicker reveal">// 03 · why now</span>
+          <h2 class="s-title reveal" id="ch3">The moment is right.</h2>
+          <ul class="points" data-cine-group>
+            <li data-cine-item><span class="mk mono">›</span> <span>Mobile order-ahead is now the expected default.</span></li>
+            <li data-cine-item><span class="mk mono">›</span> <span>A generation that wants third places, not just caffeine.</span></li>
+            <li data-cine-item><span class="mk mono">›</span> <span>Loyalty + app data make retention measurable and ownable.</span></li>
+          </ul>
+        </section>
 
-    <section class="slide" data-title="Team">
-      <div class="slide-inner">
-        <span class="kicker mono">// 10 · team</span>
-        <h2 class="s-title">The people behind the counter.</h2>
-        <p class="s-body"><span class="ph">[Placeholder — founders &amp; key team, one line each: who they are, what they've built, why they'll win this.]</span></p>
-      </div>
-    </section>
+        <section class="ps-chapter" data-chapter data-stage-num="04" data-stage-word="Experience" aria-labelledby="ch4">
+          <span class="kicker reveal">// 04 · the experience</span>
+          <h2 class="s-title reveal" id="ch4">Coffee. Create. Connect.</h2>
+          <p class="s-body reveal">A distinctive, design-led space — warm, modern, a little nerdy — where the order's already remembered, the cup's genuinely good, and the meetups turn a queue into a community.</p>
+        </section>
 
-    <section class="slide title-slide" data-title="The ask">
-      <div class="slide-inner">
-        <span class="kicker mono">// 11 · the ask</span>
-        <h2 class="s-title">Let's open the next one together.</h2>
-        <p class="s-body" style="margin:0 auto"><span class="ph">[State the ask — capital raise, sites, or partnership.]</span></p>
-        <div class="cta-row" style="justify-content:center;margin-top:26px">
-          <a href="franchise.html" class="btn btn-primary">Partner with us →</a>
-          <a href="mailto:partners@thebrewlab.example?subject=The%20Brew%20Lab%20pitch" class="btn btn-ghost">partners@thebrewlab.example</a>
-        </div>
-      </div>
-    </section>
+        <section class="ps-chapter" data-chapter data-stage-num="05" data-stage-word="Model" aria-labelledby="ch5">
+          <span class="kicker reveal">// 05 · business model &amp; unit economics</span>
+          <h2 class="s-title reveal" id="ch5">Repeat revenue, healthy cups.</h2>
+          <div class="metrics" data-cine-group>
+            <div class="metric" data-cine-item><div class="big"><span class="ph">$X.X</span></div><div class="lab mono">avg ticket</div></div>
+            <div class="metric" data-cine-item><div class="big"><span class="ph">XX%</span></div><div class="lab mono">gross margin / cup</div></div>
+            <div class="metric" data-cine-item><div class="big"><span class="ph">X.X×</span></div><div class="lab mono">visits / week, members</div></div>
+          </div>
+          <p class="s-body reveal" style="margin-top:18px"><span class="ph">[Placeholder — drop in your real unit economics: ticket, COGS, labour, rent, contribution margin, payback.]</span></p>
+        </section>
 
+        <section class="ps-chapter" data-chapter data-stage-num="06" data-stage-word="Loyalty" aria-labelledby="ch6">
+          <span class="kicker reveal">// 06 · the loyalty engine</span>
+          <h2 class="s-title reveal" id="ch6">Five tiers that turn cups into retention.</h2>
+          <ul class="points" data-cine-group>
+            <li data-cine-item><span class="mk mono">01</span> <span><b>Explorer</b> → <b>Builder</b> → <b>Architect</b> → <b>Founder</b> → <b>Visionary</b></span></li>
+            <li data-cine-item><span class="mk mono">›</span> <span>Automatic, app-native — no card, no friction.</span></li>
+            <li data-cine-item><span class="mk mono">›</span> <span>Drives frequency, first-party data, and word of mouth.</span></li>
+          </ul>
+        </section>
+
+        <section class="ps-chapter" data-chapter data-stage-num="07" data-stage-word="Traction" aria-labelledby="ch7">
+          <span class="kicker reveal">// 07 · traction</span>
+          <h2 class="s-title reveal" id="ch7">Proof, not promises.</h2>
+          <div class="metrics" data-cine-group>
+            <div class="metric" data-cine-item><div class="big"><span class="ph">XXk</span></div><div class="lab mono">cups poured</div></div>
+            <div class="metric" data-cine-item><div class="big"><span class="ph">XX%</span></div><div class="lab mono">members repeat rate</div></div>
+            <div class="metric" data-cine-item><div class="big"><span class="ph">X</span></div><div class="lab mono">sites live</div></div>
+          </div>
+          <p class="s-body reveal" style="margin-top:18px"><span class="ph">[Placeholder — add real traction: revenue, growth, retention cohorts, NPS, waitlist.]</span></p>
+        </section>
+
+        <section class="ps-chapter" data-chapter data-stage-num="08" data-stage-word="Market" aria-labelledby="ch8">
+          <span class="kicker reveal">// 08 · market &amp; expansion</span>
+          <h2 class="s-title reveal" id="ch8">Campuses first, then the corner of every busy street.</h2>
+          <p class="s-body reveal">Start where density and routine are guaranteed — universities and transit — then expand into neighbourhoods through a repeatable, format-flexible playbook (kiosk → store → flagship). <span class="ph">[Add TAM/SAM and target regions.]</span></p>
+        </section>
+
+        <section class="ps-chapter" data-chapter data-stage-num="09" data-stage-word="Partners" aria-labelledby="ch9">
+          <span class="kicker reveal">// 09 · ways to partner</span>
+          <h2 class="s-title reveal" id="ch9">Four ways to build it with us.</h2>
+          <div class="models" data-cine-group>
+            <div class="model" data-cine-item><h3><span class="tag mono">campus</span>Universities</h3><p>Flagship or kiosk at the heart of student life, rewards built in.</p></div>
+            <div class="model" data-cine-item><h3><span class="tag mono">property</span>Location owners</h3><p>A strong anchor tenant that lifts footfall for everyone nearby.</p></div>
+            <div class="model" data-cine-item><h3><span class="tag mono">operator</span>Franchisees</h3><p>Run your own with our brand, supply, training and playbook.</p></div>
+            <div class="model" data-cine-item><h3><span class="tag mono">capital</span>Investors</h3><p>Back a loyalty-led brand with a repeatable expansion model.</p></div>
+          </div>
+        </section>
+
+        <section class="ps-chapter" data-chapter data-stage-num="10" data-stage-word="Team" aria-labelledby="ch10">
+          <span class="kicker reveal">// 10 · team</span>
+          <h2 class="s-title reveal" id="ch10">The people behind the counter.</h2>
+          <p class="s-body reveal"><span class="ph">[Placeholder — founders &amp; key team, one line each: who they are, what they've built, why they'll win this.]</span></p>
+        </section>
+
+        <section class="ps-chapter ps-ask" data-chapter data-stage-num="11" data-stage-word="The ask" aria-labelledby="ch11">
+          <span class="kicker reveal">// 11 · the ask</span>
+          <h2 class="s-title reveal" id="ch11">Let's open the next one together.</h2>
+          <p class="s-body reveal"><span class="ph">[State the ask — capital raise, sites, or partnership.]</span></p>
+          <div class="cta-row reveal">
+            <a href="franchise.html" class="btn btn-primary magnetic" data-magnetic="0.2">Partner with us →</a>
+            <a href="mailto:partners@thebrewlab.example?subject=The%20Brew%20Lab%20pitch" class="btn btn-ghost magnetic" data-magnetic="0.2">partners@thebrewlab.example</a>
+          </div>
+        </section>
+
+      </div>
+    </div>
   </div>
 </main>
 
-<p class="deck-hint" aria-hidden="true">← → or swipe · press P to print</p>
-
-<nav class="deck-controls" aria-label="Slide controls">
-  <button class="deck-btn" data-deck-prev aria-label="Previous slide">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
-  </button>
-  <span class="deck-counter mono" data-deck-counter aria-hidden="true">01 / 12</span>
-  <div class="deck-dots" data-deck-dots role="tablist" aria-label="Slides"></div>
-  <button class="deck-btn" data-deck-next aria-label="Next slide">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
-  </button>
-</nav>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px"><span class="braces">{ }</span> The Brew Lab</a>
+        <p class="foot-meta">A coffee house for people with something to make.<br>Born on a campus. Growing one neighbourhood at a time.</p>
+        <nav class="foot-nav" aria-label="Footer">
+          <a href="menu.html">Menu</a><a href="rewards.html">Rewards</a><a href="story.html">Story</a><a href="franchise.html">Partner with us</a><a href="pitch.html">Pitch</a>
+        </nav>
+      </div>
+      <div class="foot-code mono" aria-hidden="true">
+<span class="kw">while</span><span class="pun">(</span><span class="prop">alive</span><span class="pun">){</span>
+  <span class="fn">drinkCoffee</span><span class="pun">();</span>
+  <span class="fn">create</span><span class="pun">();</span>
+  <span class="fn">connect</span><span class="pun">();</span>
+<span class="pun">}</span>
+      </div>
+    </div>
+    <div class="foot-sig"><b>THE BREW LAB</b> · Brew Ideas. · Coffee. Create. Connect. <span style="margin-left:auto;opacity:.7;">© 2026</span></div>
+  </div>
+</footer>
 
 <script type="module" src="assets/js/main.js"></script>
-<script>
-  // print shortcut
-  addEventListener('keydown', function(e){ if((e.key==='p'||e.key==='P') && !e.metaKey && !e.ctrlKey){ e.preventDefault(); window.print(); } });
-</script>
 </body>
 </html>

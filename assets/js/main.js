@@ -97,9 +97,9 @@ function boot() {
     load('./cursor.js', (m) => m.initCursor(ctx));
   }
 
-  /* smooth scroll — skip on reduced motion and on the (non-scrolling) deck */
+  /* smooth scroll — skip on reduced motion */
   let lenisPromise = null;
-  if (!reduceMotion && page !== 'deck') {
+  if (!reduceMotion) {
     lenisPromise = load('./smoothScroll.js', (m) => m.initSmoothScroll(ctx));
   }
 
@@ -114,8 +114,9 @@ function boot() {
     if (!reduceMotion) load('./cinematics.js', (m) => m.initCinematics({ ...ctx, lenisPromise }));
   } else if (page === 'rewards') {
     if (!reduceMotion) load('./cinematics.js', (m) => m.initCinematics({ ...ctx, lenisPromise }));
-  } else if (page === 'deck') {
-    load('./deck.js', (m) => m.initDeck(ctx));
+  } else if (page === 'pitch') {
+    load('./pitchStory.js', (m) => m.initPitchStory(ctx));
+    if (!reduceMotion) load('./cinematics.js', (m) => m.initCinematics({ ...ctx, lenisPromise }));
   }
 }
 
