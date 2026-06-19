@@ -19,6 +19,13 @@
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/effects.css">
+<style>
+  /* bean-to-campus journey: keep all five word+copy stages within the pinned view */
+  [data-brew-journey] { padding-top: clamp(36px, 7vh, 64px); padding-bottom: clamp(36px, 7vh, 64px); }
+  .journey-stages { display: grid; gap: clamp(10px, 2vh, 20px); margin-top: 22px; }
+  .j-word { display: block; font-size: clamp(22px, 5.2vw, 38px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+  .j-sub { display: block; color: var(--muted); font-size: clamp(13px, 2.3vw, 15.5px); font-weight: 400; letter-spacing: 0; margin-top: 4px; max-width: 48ch; }
+</style>
 <script type="importmap">
 {
   "imports": {
@@ -62,8 +69,6 @@
     <div>
       <span class="eyebrow"><span class="dot"></span>// responsibly sourced · served on campus</span>
       <h1 class="title">THE BREW LAB<br><span class="grad-text">Sourced well. Served better.</span></h1>
-      <p class="mantra">Coffee. Create. Connect.</p>
-      <p class="sub">great coffee, proper food, and a seat between lectures</p>
       <div class="cta-row">
         <a href="menu.html" class="btn btn-primary magnetic" data-magnetic="0.25">Grab one to go →</a>
         <a href="rewards.html" class="btn btn-ghost magnetic" data-magnetic="0.25">See what's brewing</a>
@@ -105,7 +110,7 @@
 <section id="positioning">
   <div class="wrap">
     <div class="sec-label reveal">// more than a cup</div>
-    <h2 class="reveal">The coffee's the reason you stop.<br>The welcome's why you stay.</h2>
+    <h2 class="reveal">Coffee. Create. Connect.</h2>
     <p class="lead reveal">Between lectures, before a shift, or in the long afternoon that won't end — it's your stop. A cup that's genuinely good, food that actually fills you up, and a counter that already knows your order. Done properly, every day.</p>
     <div class="triad" data-cine-group>
       <div class="tcard reveal" data-cine-item><div class="k mono">// the coffee</div><h3>Responsibly sourced</h3><p>Beans we can trace, traded fairly and roasted with care — then pulled by people who actually know what they're doing. Seriously good coffee, priced like a habit you can keep.</p></div>
@@ -117,17 +122,16 @@
 
 <section class="scene" data-brew-journey aria-label="From bean to campus">
   <div class="wrap">
-    <div class="sec-label">// bean to cup</div>
+    <div class="sec-label">// bean to campus</div>
     <h2 class="sr-only">From bean to campus</h2>
     <div class="brew-rail" aria-hidden="true"><span class="fill"></span></div>
     <div class="journey-stages">
-      <div data-stage class="grad-text" style="font-size:clamp(26px,6.2vw,42px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;min-height:1.2em">Bean.</div>
-      <div data-stage style="font-size:clamp(26px,6.2vw,42px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;min-height:1.2em">Grind.</div>
-      <div data-stage style="font-size:clamp(26px,6.2vw,42px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;min-height:1.2em">Brew.</div>
-      <div data-stage style="font-size:clamp(26px,6.2vw,42px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;min-height:1.2em">Cup.</div>
-      <div data-stage style="font-size:clamp(26px,6.2vw,42px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;min-height:1.2em">Campus.</div>
+      <div data-stage><span class="j-word grad-text">Bean.</span><span class="j-sub">Responsibly sourced, traceable back to the farm.</span></div>
+      <div data-stage><span class="j-word">Grind.</span><span class="j-sub">Dialled in fresh for every order.</span></div>
+      <div data-stage><span class="j-word">Brew.</span><span class="j-sub">Pulled with care by people who know how.</span></div>
+      <div data-stage><span class="j-word">Cup.</span><span class="j-sub">Genuinely good, and priced like a habit.</span></div>
+      <div data-stage><span class="j-word">Campus.</span><span class="j-sub">Open early, yours till late.</span></div>
     </div>
-    <p class="lead">Sourced with care, roasted right, and made to order — repeated every morning until it's just part of how campus starts the day.</p>
   </div>
 </section>
 
@@ -165,9 +169,9 @@
 
 <section id="manifesto" class="manifesto">
   <div class="wrap">
-    <div class="sec-label reveal" style="color:var(--cyan)">// the short version</div>
-    <h2 class="reveal">It starts with the coffee. It never ends there.</h2>
-    <p class="big seq reveal">It's the <b>coffee</b>, the <b>food</b>, the <b>welcome</b>, and the steady hum of <b>campus</b> — <b style="color:var(--text)">somewhere that feels like yours</b>.</p>
+    <div class="sec-label reveal" style="color:var(--cyan)">// every morning</div>
+    <h2 class="reveal">The same good cup.<br>The same warm hello.</h2>
+    <p class="big seq reveal">It's the <b>coffee</b>, the <b>food</b>, the <b>faces</b> you know, and a slice of <b>campus</b> that's <b style="color:var(--text)">yours before the day even starts</b>.</p>
   </div>
 </section>
 </main>
