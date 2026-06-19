@@ -59,7 +59,7 @@ export function initRepl() {
       steps.forEach((s, i) => setTimeout(() => print(`› <span class="ok">${s}</span>`), 260 * (i + 1)));
     },
     servedaily() {
-      ['sourcing… beans → cups', 'kitchen: open', 'campus: caffeinated ✓']
+      ['sourcing… beans → cups', 'kitchen: open', 'community: caffeinated ✓']
         .forEach((s, i) => setTimeout(() => print('› <span class="ok">' + s + '</span>'), 220 * (i + 1)));
     },
   };
