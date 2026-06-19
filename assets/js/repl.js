@@ -58,8 +58,8 @@ export function initRepl() {
       const steps = ['grinding beans', 'dialing in', `pulling ${esc(drink)}`, 'served ✓'];
       steps.forEach((s, i) => setTimeout(() => print(`› <span class="ok">${s}</span>`), 260 * (i + 1)));
     },
-    brewideas() {
-      ['brewing… grounds → ideas', 'community: online', 'future resolved: Infinity ✓']
+    servedaily() {
+      ['sourcing… beans → cups', 'kitchen: open', 'campus: caffeinated ✓']
         .forEach((s, i) => setTimeout(() => print('› <span class="ok">' + s + '</span>'), 220 * (i + 1)));
     },
   };

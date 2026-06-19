@@ -1,4 +1,4 @@
-<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Brew Lab — Brew Ideas.">
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Brew Lab — Sourced well. Served better.">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
       <stop stop-color="#A78BFA"/>
@@ -12,9 +12,9 @@
   </defs>
   <rect width="1200" height="630" fill="#0F1117"/>
   <rect width="1200" height="630" fill="url(#glow)"/>
-  <text x="80" y="150" font-family="'JetBrains Mono', monospace" font-size="26" fill="#7DD3FC">// good coffee, made to go</text>
+  <text x="80" y="150" font-family="'JetBrains Mono', monospace" font-size="26" fill="#7DD3FC">// responsibly sourced · served on campus</text>
   <text x="76" y="300" font-family="'Inter', sans-serif" font-size="96" font-weight="800" letter-spacing="-3" fill="#F5F7FA">THE BREW LAB</text>
-  <text x="80" y="400" font-family="'Inter', sans-serif" font-size="84" font-weight="800" letter-spacing="-3" fill="url(#g)">Brew Ideas.</text>
-  <text x="80" y="475" font-family="'Inter', sans-serif" font-size="34" font-weight="600" fill="#98A1B2">Coffee. Create. Connect.</text>
-  <text x="80" y="560" font-family="'JetBrains Mono', monospace" font-size="22" fill="#98A1B2">{ } the best two minutes of your morning</text>
+  <text x="80" y="398" font-family="'Inter', sans-serif" font-size="58" font-weight="800" letter-spacing="-2" fill="url(#g)">Sourced well. Served better.</text>
+  <text x="80" y="470" font-family="'Inter', sans-serif" font-size="34" font-weight="600" fill="#98A1B2">Coffee. Create. Connect.</text>
+  <text x="80" y="560" font-family="'JetBrains Mono', monospace" font-size="22" fill="#98A1B2">{ } great coffee · proper food · served on campus</text>
 </svg>

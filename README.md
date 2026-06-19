@@ -1,6 +1,6 @@
 # The Brew Lab — Website
 
-> Brew Ideas. · Coffee. Create. Connect.
+> Sourced well. Served better. · Coffee. Create. Connect.
 
 The marketing website for **The Brew Lab**, a developer/creator-themed coffee
 house. Built as an advanced, **mobile-first**, fully static site — no build step,
