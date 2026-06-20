@@ -87,6 +87,9 @@ section { padding: var(--space-section) 0; position: relative; z-index: 1; }
   font-family: var(--font-mono); font-size: var(--fs-eyebrow);
   color: var(--lavender); letter-spacing: 0.05em; margin-bottom: 16px;
 }
+h1, h2, h3, h4, .title, .s-title {
+  font-family: var(--font-heading); font-weight: 700;
+}
 h2 {
   font-size: var(--fs-h2); font-weight: 700; letter-spacing: -0.03em;
   line-height: 1.1; margin-bottom: 16px;
@@ -122,7 +125,7 @@ nav {
 }
 .brand {
   display: inline-flex; align-items: center; gap: 10px;
-  font-weight: 700; letter-spacing: -0.01em; font-size: 15px;
+  font-family: var(--font-heading); font-weight: 800; letter-spacing: -0.01em; font-size: 15px;
   text-decoration: none; color: var(--text); flex: none;
 }
 .brand .braces { font-family: var(--font-mono); color: var(--lavender); font-weight: 600; }

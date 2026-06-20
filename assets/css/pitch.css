@@ -13,7 +13,7 @@
 .ps-hero { padding: clamp(56px, 13vh, 140px) 0 clamp(28px, 6vh, 64px); }
 .ps-hero .kicker { margin-bottom: 18px; }
 .ps-hero h1 {
-  font-size: clamp(40px, 11vw, 86px); font-weight: 800; letter-spacing: -0.04em;
+  font-size: clamp(40px, 11vw, 86px); font-weight: 700; letter-spacing: -0.04em;
   line-height: 0.98; margin-bottom: 18px; text-wrap: balance;
 }
 .ps-hero .lead { font-size: clamp(16px, 3.8vw, 20px); }
@@ -93,7 +93,7 @@
   letter-spacing: 0.05em; margin-bottom: 16px; display: inline-flex; gap: 8px; align-items: center;
 }
 .s-title {
-  font-size: clamp(26px, 5.4vw, 46px); font-weight: 800; letter-spacing: -0.03em;
+  font-size: clamp(26px, 5.4vw, 46px); font-weight: 700; letter-spacing: -0.03em;
   line-height: 1.06; margin-bottom: 16px; text-wrap: balance;
 }
 .s-body { font-size: clamp(15px, 3.6vw, 19px); color: var(--muted); max-width: 620px; line-height: 1.55; }

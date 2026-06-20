@@ -28,7 +28,8 @@
   --grad-soft: linear-gradient(140deg, var(--lavender), transparent 40%, transparent 70%, var(--cyan));
 
   /* ---- type ---- */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Sora', var(--font-sans);
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
 
   /* fluid type scale (mobile-first via clamp) */

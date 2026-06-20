@@ -13,8 +13,8 @@
   <rect width="1200" height="630" fill="#0F1117"/>
   <rect width="1200" height="630" fill="url(#glow)"/>
   <text x="80" y="150" font-family="'JetBrains Mono', monospace" font-size="26" fill="#7DD3FC">// you won't find us by accident</text>
-  <text x="76" y="300" font-family="'Inter', sans-serif" font-size="96" font-weight="800" letter-spacing="-3" fill="#F5F7FA">THE BREW LAB</text>
-  <text x="80" y="398" font-family="'Inter', sans-serif" font-size="58" font-weight="800" letter-spacing="-2" fill="url(#g)">Sourced well. Served better.</text>
-  <text x="80" y="470" font-family="'Inter', sans-serif" font-size="34" font-weight="600" fill="#98A1B2">Coffee. Create. Connect.</text>
+  <text x="76" y="300" font-family="'Sora', sans-serif" font-size="96" font-weight="700" letter-spacing="-3" fill="#F5F7FA">THE BREW LAB</text>
+  <text x="80" y="398" font-family="'Sora', sans-serif" font-size="58" font-weight="700" letter-spacing="-2" fill="url(#g)">Sourced well. Served better.</text>
+  <text x="80" y="470" font-family="'Manrope', sans-serif" font-size="34" font-weight="600" fill="#98A1B2">Coffee. Create. Connect.</text>
   <text x="80" y="560" font-family="'JetBrains Mono', monospace" font-size="22" fill="#98A1B2">{ } great coffee · proper food · for your community</text>
 </svg>
