@@ -22,8 +22,9 @@ modern things in the browser.
 
 - **Static HTML/CSS/JS**, no bundler. Advanced libraries load at runtime via an
   ES-module `importmap` from CDN: **Three.js** (WebGL hero), **GSAP +
-  ScrollTrigger** (cinematics), **Lenis** (smooth scroll).
-- Native **View Transitions API** for page transitions (graceful fade fallback).
+  ScrollTrigger** (cinematics).
+- Native browser **smooth scrolling** (`scroll-behavior: smooth`) and the
+  **View Transitions API** for page transitions (graceful fade fallback).
 - All optional modules are dynamically imported and **fail soft** — if a CDN or
   WebGL is unavailable, the page still works (the CSS hero stands in).
 
@@ -36,7 +37,7 @@ No other stylesheet hardcodes hex.
 ```
 index · menu · rewards · story · franchise · pitch   (pages)
 assets/css/   tokens · base · effects · deck
-assets/js/    main · theme · smoothScroll · cursor · transitions
+assets/js/    main · theme · transitions
               cinematics · hero3d · repl · deck
 assets/img/   logo + brace mark + favicon + OG image (SVG)
 ```
@@ -44,9 +45,8 @@ assets/img/   logo + brace mark + favicon + OG image (SVG)
 ## Mobile-first & accessibility
 - Built mobile-up: fluid `clamp()` type, `100dvh`, safe-area insets, ≥44px tap
   targets, slide-in nav, no horizontal overflow.
-- Heavy effects are gated: custom cursor/magnetic are pointer-fine only; WebGL
-  caps DPR + particle counts and pauses offscreen; **`prefers-reduced-motion`**
-  disables motion everywhere.
+- Heavy effects are gated: WebGL caps DPR + particle counts and pauses
+  offscreen; **`prefers-reduced-motion`** disables motion everywhere.
 - WCAG 2.1 AA target: skip link, semantic landmarks, visible focus, full keyboard
   operability, ARIA live regions for the REPL and deck, labelled forms.
 

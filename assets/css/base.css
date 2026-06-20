@@ -23,11 +23,6 @@ body {
   transition: background var(--t-slow) ease, color var(--t-slow) ease;
 }
 
-/* Lenis smooth-scroll hooks (no-op until JS attaches) */
-html.lenis, html.lenis body { height: auto; }
-.lenis.lenis-smooth { scroll-behavior: auto !important; }
-.lenis.lenis-stopped { overflow: hidden; }
-
 ::selection { background: var(--lavender); color: var(--on-accent); }
 .mono { font-family: var(--font-mono); }
 img, svg { display: block; max-width: 100%; }

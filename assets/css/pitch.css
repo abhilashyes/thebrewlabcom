@@ -137,7 +137,7 @@
 
 /* ---------- print ---------- */
 @media print {
-  .ps-progressbar, .ps-stage-nav, .ps-scrollcue, .ambient, nav, .cursor-dot, .cursor-ring { display: none !important; }
+  .ps-progressbar, .ps-stage-nav, .ps-scrollcue, .ambient, nav { display: none !important; }
   .ps-layout { grid-template-columns: 1fr; }
   .ps-stage { position: static; height: auto; border: none; }
   .ps-chapter { min-height: 0; page-break-inside: avoid; border-top: 1px solid #ccc; }

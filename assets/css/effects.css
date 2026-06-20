@@ -1,36 +1,8 @@
 /* ============================================================
    The Brew Lab — Effects
-   Custom cursor, hero/WebGL, REPL terminal, page transitions,
-   cinematics. All effects are pointer/motion gated for mobile + a11y.
+   Hero/WebGL, REPL terminal, page transitions, cinematics.
+   All effects are pointer/motion gated for mobile + a11y.
    ============================================================ */
-
-/* ---------- custom cursor (pointer-fine only) ---------- */
-.cursor-dot, .cursor-ring { display: none; }
-
-@media (hover: hover) and (pointer: fine) {
-  body.has-cursor { cursor: none; }
-  body.has-cursor a, body.has-cursor button, body.has-cursor .magnetic { cursor: none; }
-
-  .cursor-dot, .cursor-ring {
-    display: block; position: fixed; top: 0; left: 0; z-index: 999;
-    pointer-events: none; border-radius: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    will-change: transform; mix-blend-mode: difference;
-  }
-  .cursor-dot { width: 7px; height: 7px; background: #fff; }
-  .cursor-ring {
-    width: 34px; height: 34px; border: 1px solid #fff;
-    transition: width var(--t-base) var(--ease), height var(--t-base) var(--ease),
-                background var(--t-base) ease, opacity var(--t-base) ease;
-  }
-  .cursor-ring.hot { width: 54px; height: 54px; background: rgba(255, 255, 255, 0.12); }
-}
-@media (prefers-reduced-motion: reduce) {
-  body.has-cursor { cursor: auto; }
-  .cursor-dot, .cursor-ring { display: none !important; }
-}
-
-.magnetic { will-change: transform; }
 
 /* ---------- hero ---------- */
 .hero { padding: clamp(48px, 9vw, 84px) 0 clamp(48px, 8vw, 72px); position: relative; }

@@ -92,31 +92,20 @@ function boot() {
   /* page transitions — everywhere, cheap */
   load('./transitions.js', (m) => m.initTransitions(ctx));
 
-  /* custom cursor — desktop, motion-on only */
-  if (finePointer && !reduceMotion) {
-    load('./cursor.js', (m) => m.initCursor(ctx));
-  }
-
-  /* smooth scroll — skip on reduced motion */
-  let lenisPromise = null;
-  if (!reduceMotion) {
-    lenisPromise = load('./smoothScroll.js', (m) => m.initSmoothScroll(ctx));
-  }
-
   /* per-page enhancements */
   if (page === 'home') {
     load('./repl.js', (m) => m.initRepl(ctx));
     if (!reduceMotion) {
       load('./hero3d.js', (m) => m.initHero3D(ctx));
-      load('./cinematics.js', (m) => m.initCinematics({ ...ctx, lenisPromise }));
+      load('./cinematics.js', (m) => m.initCinematics(ctx));
     }
   } else if (page === 'story') {
-    if (!reduceMotion) load('./cinematics.js', (m) => m.initCinematics({ ...ctx, lenisPromise }));
+    if (!reduceMotion) load('./cinematics.js', (m) => m.initCinematics(ctx));
   } else if (page === 'rewards') {
-    if (!reduceMotion) load('./cinematics.js', (m) => m.initCinematics({ ...ctx, lenisPromise }));
+    if (!reduceMotion) load('./cinematics.js', (m) => m.initCinematics(ctx));
   } else if (page === 'pitch') {
     load('./pitchStory.js', (m) => m.initPitchStory(ctx));
-    if (!reduceMotion) load('./cinematics.js', (m) => m.initCinematics({ ...ctx, lenisPromise }));
+    if (!reduceMotion) load('./cinematics.js', (m) => m.initCinematics(ctx));
   }
 }
 

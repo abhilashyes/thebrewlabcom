@@ -1,20 +1,12 @@
-/* Scroll cinematics with GSAP + ScrollTrigger, driven by Lenis when
-   present. Pinned brew-journey, parallax layers, and count-up stats.
+/* Scroll cinematics with GSAP + ScrollTrigger, driven by native scroll.
+   Pinned brew-journey, parallax layers, and count-up stats.
    main.js never calls this under reduced-motion. Fails soft. */
 
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-export async function initCinematics({ lenisPromise } = {}) {
+export async function initCinematics() {
   gsap.registerPlugin(ScrollTrigger);
-
-  // sync ScrollTrigger to Lenis if smooth-scroll is active
-  try {
-    const lenis = lenisPromise ? await lenisPromise : null;
-    if (lenis && lenis.on) {
-      lenis.on('scroll', ScrollTrigger.update);
-    }
-  } catch (_) {}
 
   // ---- parallax layers ----
   gsap.utils.toArray('[data-parallax]').forEach((el) => {
