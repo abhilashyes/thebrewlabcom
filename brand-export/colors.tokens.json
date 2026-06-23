@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schemas.brewlab/brand-colors",
+  "name": "The Brew Lab — Brand Colors",
+  "description": "Single source of truth, mirrored from assets/css/tokens.css. Two themes: dark (default) and light. Accent = lavender.",
+  "themes": {
+    "dark": {
+      "bg":         { "hex": "#0F1117", "role": "App background" },
+      "surface":    { "hex": "#161A22", "role": "Raised surface / sidebar" },
+      "card":       { "hex": "#1B202B", "role": "Card / input / editor fill" },
+      "accent":     { "hex": "#A78BFA", "role": "Primary accent (lavender)" },
+      "accentAlt":  { "hex": "#7DD3FC", "role": "Secondary accent (cyan)" },
+      "champagne":  { "hex": "#E9CBA7", "role": "Warm tertiary / price text" },
+      "rose":       { "hex": "#F4A8C5", "role": "Tertiary accent (rose)" },
+      "text":       { "hex": "#F5F7FA", "role": "Primary text" },
+      "textMuted":  { "hex": "#98A1B2", "role": "Secondary / muted text" },
+      "onAccent":   { "hex": "#0F1117", "role": "Text/icon on accent fills" },
+      "line":       { "hex": "#FFFFFF", "alpha": 0.06, "rgba8": "#FFFFFF0F", "role": "Hairline borders / dividers" },
+      "glass":      { "hex": "#1B202B", "alpha": 0.55, "rgba8": "#1B202B8C", "role": "Frosted overlay" },
+      "glow":       { "hex": "#A78BFA", "alpha": 0.22, "rgba8": "#A78BFA38", "role": "Accent glow / button shadow" },
+      "shadow":     { "hex": "#000000", "alpha": 0.55, "rgba8": "#0000008C", "role": "Elevation shadow" }
+    },
+    "light": {
+      "bg":         { "hex": "#FAFAFC", "role": "App background" },
+      "surface":    { "hex": "#F4F5F8", "role": "Raised surface / sidebar" },
+      "card":       { "hex": "#FFFFFF", "role": "Card / input / editor fill" },
+      "accent":     { "hex": "#7C5CFA", "role": "Primary accent (lavender)" },
+      "accentAlt":  { "hex": "#0891B2", "role": "Secondary accent (cyan)" },
+      "champagne":  { "hex": "#B07B4E", "role": "Warm tertiary / price text" },
+      "rose":       { "hex": "#DB7093", "role": "Tertiary accent (rose)" },
+      "text":       { "hex": "#1A1D26", "role": "Primary text" },
+      "textMuted":  { "hex": "#6B7280", "role": "Secondary / muted text" },
+      "onAccent":   { "hex": "#FFFFFF", "role": "Text/icon on accent fills" },
+      "line":       { "hex": "#0F1117", "alpha": 0.08, "rgba8": "#0F111714", "role": "Hairline borders / dividers" },
+      "glass":      { "hex": "#FFFFFF", "alpha": 0.70, "rgba8": "#FFFFFFB3", "role": "Frosted overlay" },
+      "glow":       { "hex": "#7C5CFA", "alpha": 0.16, "rgba8": "#7C5CFA29", "role": "Accent glow / button shadow" },
+      "shadow":     { "hex": "#0F1117", "alpha": 0.10, "rgba8": "#0F11171A", "role": "Elevation shadow" }
+    }
+  },
+  "gradient": {
+    "signature": {
+      "type": "linear",
+      "angleDeg": 110,
+      "stops": [
+        { "color": "accent",    "position": 0.0 },
+        { "color": "rose",      "position": 0.55 },
+        { "color": "champagne", "position": 1.0 }
+      ],
+      "note": "Used on logo wordmark, hero headlines, and big numbers."
+    }
+  },
+  "statusDots": {
+    "red":    "#FF5F57",
+    "yellow": "#FEBC2E",
+    "green":  "#28C840"
+  }
+}

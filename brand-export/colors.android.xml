@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Brew Lab — brand colors. Android values/colors.xml.
+     Format is #AARRGGBB. Pair with a -night resource qualifier:
+       res/values/colors.xml        -> light
+       res/values-night/colors.xml  -> dark
+     Below are both sets; split them into the two files. -->
+<resources>
+
+    <!-- ============ DARK (values-night) ============ -->
+    <color name="brand_bg">#FF0F1117</color>
+    <color name="brand_surface">#FF161A22</color>
+    <color name="brand_card">#FF1B202B</color>
+    <color name="brand_accent">#FFA78BFA</color>
+    <color name="brand_accent_alt">#FF7DD3FC</color>
+    <color name="brand_champagne">#FFE9CBA7</color>
+    <color name="brand_rose">#FFF4A8C5</color>
+    <color name="brand_text">#FFF5F7FA</color>
+    <color name="brand_text_muted">#FF98A1B2</color>
+    <color name="brand_on_accent">#FF0F1117</color>
+    <color name="brand_line">#0FFFFFFF</color>
+    <color name="brand_glass">#8C1B202B</color>
+    <color name="brand_glow">#38A78BFA</color>
+    <color name="brand_shadow">#8C000000</color>
+
+    <!-- ============ LIGHT (values) ============ -->
+    <color name="brand_bg_light">#FFFAFAFC</color>
+    <color name="brand_surface_light">#FFF4F5F8</color>
+    <color name="brand_card_light">#FFFFFFFF</color>
+    <color name="brand_accent_light">#FF7C5CFA</color>
+    <color name="brand_accent_alt_light">#FF0891B2</color>
+    <color name="brand_champagne_light">#FFB07B4E</color>
+    <color name="brand_rose_light">#FFDB7093</color>
+    <color name="brand_text_light">#FF1A1D26</color>
+    <color name="brand_text_muted_light">#FF6B7280</color>
+    <color name="brand_on_accent_light">#FFFFFFFF</color>
+    <color name="brand_line_light">#140F1117</color>
+    <color name="brand_glass_light">#B3FFFFFF</color>
+    <color name="brand_glow_light">#297C5CFA</color>
+    <color name="brand_shadow_light">#1A0F1117</color>
+
+    <!-- status dots (theme-independent) -->
+    <color name="brand_dot_red">#FFFF5F57</color>
+    <color name="brand_dot_yellow">#FFFEBC2E</color>
+    <color name="brand_dot_green">#FF28C840</color>
+
+</resources>
